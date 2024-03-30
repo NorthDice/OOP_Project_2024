@@ -14,13 +14,14 @@ namespace MainForm.Classes.Cinema
         private string _filmName;
         private Halls _hallNumber;
         private TimeSpan _time;
+        private static int _count = 0;
 
         public Session(DateTime date, string filmName, Halls hallNumber, TimeSpan time)
         {
-            _date = date;
-            _filmName = filmName;
-            _hallNumber = hallNumber;
-            _time = time;
+            Date = date;
+            FilmName = filmName;
+            HallNumber = hallNumber;
+            Time = time;
         }
 
         public event EventHandler SessionStarted;
@@ -40,9 +41,8 @@ namespace MainForm.Classes.Cinema
             
             TimeSpan timeRemaining = Date - currentDateTime;
 
-            if (timeRemaining.TotalHours < 6)
+            if (timeRemaining.TotalHours < 6 || _count > 30)
             {
-                
                 return false;
             }
             
@@ -108,6 +108,17 @@ namespace MainForm.Classes.Cinema
                     throw new ArgumentException("Film name can not be null or empty!");
                 }
                 _filmName = value;
+            }
+        }
+
+        public static int CountOfGuests
+        {
+            set
+            {
+                if (_count > 30)
+                {
+                    throw new ArgumentOutOfRangeException("Erorr!");
+                }
             }
         }
     }

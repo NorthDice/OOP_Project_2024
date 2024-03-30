@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\cinema\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\cinema\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\cinema\\sessionlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\cinema\\sessionlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\cinema\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\cinema\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\enums\\halls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\enums\\halls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\interfaces\\isessiondescriprion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\interfaces\\isessiondescriprion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,18 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\registreduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\registreduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\cinema\\film.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\cinema\\film.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\interfaces\\isessiondescriprion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\interfaces\\isessiondescriprion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\interfaces\\iregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\eventsdelegates\\eventdelegates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\eventsdelegates\\eventdelegates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\enums\\halls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\enums\\halls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,20 +62,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IRegistration.cs",
-              "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Interfaces\\IRegistration.cs",
-              "RelativeDocumentMoniker": "MainForm\\Interfaces\\IRegistration.cs",
-              "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Interfaces\\IRegistration.cs",
-              "RelativeToolTip": "MainForm\\Interfaces\\IRegistration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T18:20:09.216Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -88,53 +72,40 @@
               "RelativeDocumentMoniker": "MainForm\\Classes\\Cinema\\SessionList.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\SessionList.cs",
               "RelativeToolTip": "MainForm\\Classes\\Cinema\\SessionList.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T16:06:54.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\Admin.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\Admin.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\Admin.cs",
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\Admin.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAkwBgAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAkwGsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-10T15:10:07.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Film.cs",
-              "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\Film.cs",
-              "RelativeDocumentMoniker": "MainForm\\Classes\\Cinema\\Film.cs",
-              "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\Film.cs",
-              "RelativeToolTip": "MainForm\\Classes\\Cinema\\Film.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAkAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T16:04:03.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Session.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\Session.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\Cinema\\Session.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\Session.cs",
               "RelativeToolTip": "MainForm\\Classes\\Cinema\\Session.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAiwCIAAAA6AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-10T15:59:23.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "RegistredUser.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\RegistredUser.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\RegistredUser.cs",
@@ -142,8 +113,7 @@
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\RegistredUser.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T15:07:46.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-10T15:07:46.414Z"
             },
             {
               "$type": "Document",
@@ -159,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Guest.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\Guest.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\Guest.cs",
@@ -167,12 +137,11 @@
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\Guest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T15:13:18.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-10T15:13:18.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "ISessionDescriprion.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Interfaces\\ISessionDescriprion.cs",
               "RelativeDocumentMoniker": "MainForm\\Interfaces\\ISessionDescriprion.cs",
@@ -184,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "UserList.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\UserList.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\UserList.cs",
@@ -192,8 +161,31 @@
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\UserList.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T16:10:41.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T16:10:41.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Halls.cs",
+              "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Enums\\Halls.cs",
+              "RelativeDocumentMoniker": "MainForm\\Enums\\Halls.cs",
+              "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Enums\\Halls.cs",
+              "RelativeToolTip": "MainForm\\Enums\\Halls.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T15:49:50.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRegistration.cs",
+              "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Interfaces\\IRegistration.cs",
+              "RelativeDocumentMoniker": "MainForm\\Interfaces\\IRegistration.cs",
+              "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Interfaces\\IRegistration.cs",
+              "RelativeToolTip": "MainForm\\Interfaces\\IRegistration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T18:20:09.216Z"
             },
             {
               "$type": "Document",
@@ -210,18 +202,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Halls.cs",
-              "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Enums\\Halls.cs",
-              "RelativeDocumentMoniker": "MainForm\\Enums\\Halls.cs",
-              "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Enums\\Halls.cs",
-              "RelativeToolTip": "MainForm\\Enums\\Halls.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T15:49:50.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Program.cs",
               "RelativeDocumentMoniker": "MainForm\\Program.cs",
@@ -233,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Main.cs",
               "RelativeDocumentMoniker": "MainForm\\Main.cs",
