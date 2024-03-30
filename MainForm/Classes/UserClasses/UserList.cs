@@ -11,37 +11,42 @@ namespace MainForm.Classes.UserClasses
     {
         private List<User> users;
 
-       
-
         public UserList()
         {
             users = new List<User>();
         }
 
-        public int Count => throw new NotImplementedException();
+        public int Count => users.Count;
 
-        public bool IsSynchronized => throw new NotImplementedException();
+        public bool IsSynchronized => false;
 
-        public object SyncRoot => throw new NotImplementedException();
+        public object SyncRoot => this;
 
         public void AddUser(User user)
         {
-           throw new NotImplementedException();
+            if (user != null)
+            {
+                users.Add(user);
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(user), "User cannot be null");
+            }
         }
 
         public bool RemoveUser(User user)
         {
-            throw new NotImplementedException();
+            return users.Remove(user);
         }
 
         public IEnumerator<User> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return users.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return users.GetEnumerator();
         }
 
         public void CopyTo(Array array, int index)

@@ -19,11 +19,21 @@ namespace MainForm.Classes.Cinema
 
         public void AddSession(Session session)
         {
+
+            session = session ?? throw new ArgumentNullException(nameof(session), "Session can not be null value!");
+
             _sessions.Add(session);
         }
 
         public bool RemoveSession(Session session)
         {
+            session = session ?? throw new ArgumentNullException(nameof(session), "Session can not be null value!");
+
+            if(_sessions.Contains(session))
+            {
+                throw new ArgumentException("Duplicate session!");
+            }
+
             return _sessions.Remove(session);
         }
 

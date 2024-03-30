@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\cinema\\sessionlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\cinema\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\cinema\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\interfaces\\isessiondescriprion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\interfaces\\isessiondescriprion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\classes\\userclasses\\registreduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "MainForm\\Classes\\Cinema\\SessionList.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\SessionList.cs",
               "RelativeToolTip": "MainForm\\Classes\\Cinema\\SessionList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T16:06:54.322Z",
               "EditorCaption": ""
@@ -85,20 +85,20 @@
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\Admin.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\Admin.cs",
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\Admin.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAkwGsAAAAJAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-10T15:10:07.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Session.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\Session.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\Cinema\\Session.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\Session.cs",
               "RelativeToolTip": "MainForm\\Classes\\Cinema\\Session.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAPAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEAAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-10T15:59:23.374Z",
               "EditorCaption": ""
@@ -129,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Guest.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\Guest.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\Guest.cs",
@@ -137,11 +137,12 @@
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\Guest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T15:13:18.639Z"
+              "WhenOpened": "2024-03-10T15:13:18.639Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ISessionDescriprion.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Interfaces\\ISessionDescriprion.cs",
               "RelativeDocumentMoniker": "MainForm\\Interfaces\\ISessionDescriprion.cs",
@@ -153,19 +154,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "UserList.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\UserList.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\UserList.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\UserList.cs",
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\UserList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAkwDcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T16:10:41.95Z"
+              "WhenOpened": "2024-03-11T16:10:41.95Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Halls.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Enums\\Halls.cs",
               "RelativeDocumentMoniker": "MainForm\\Enums\\Halls.cs",

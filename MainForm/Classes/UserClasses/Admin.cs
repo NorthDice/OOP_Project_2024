@@ -15,7 +15,7 @@ namespace MainForm.Classes.UserClasses
         private string _password;
         private string _name;
         private string _surname;
-
+        private SessionList _sessions;
 
         public Admin(string login, string password, string name, string surname)
         {
@@ -26,8 +26,24 @@ namespace MainForm.Classes.UserClasses
         }
 
         public bool AddSession(DateTime date, TimeSpan time, Halls hallNumber, string filmName)
-        { 
-            throw new NotImplementedException();
+        {
+            if(String.IsNullOrEmpty(filmName)) 
+            {
+                throw new ArgumentNullException("Film name cannot be null or empty!");
+            }
+            if (date <= DateTime.Now.Date)
+            {
+                return false;
+            }
+
+            if (!Enum.IsDefined(typeof(Halls), hallNumber))
+            {
+                throw new ArgumentOutOfRangeException("Unknown hall number!");
+            }
+
+            _sessions.AddSession(new Session(date, filmName, hallNumber, time));
+            return true;
+           
         }
         public bool EditSession(DateTime date, TimeSpan time, TimeSpan newTime)
         {
@@ -41,7 +57,19 @@ namespace MainForm.Classes.UserClasses
 
         public override bool SignUp(string login, string password)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrEmpty(login)|| String.IsNullOrEmpty(password))
+            {
+                throw new ArgumentNullException("Liogin and password cannot be null value!");
+            }
+            if (Regex.IsMatch(password, "^[a-zA-Z]{6,}$"))
+            {
+                return false;
+            }
+            if (Regex.IsMatch(login, "^[a-zA-Z]{5,}$"))
+            {
+                return false;
+            }
+
         }
 
         public string Login
@@ -90,6 +118,7 @@ namespace MainForm.Classes.UserClasses
                 }
             }
         }
+
 
         public string Surname
         {
