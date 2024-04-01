@@ -29,12 +29,24 @@ namespace MainForm.Classes.Cinema
         {
             session = session ?? throw new ArgumentNullException(nameof(session), "Session can not be null value!");
 
-            if(_sessions.Contains(session))
+            if (_sessions.Contains(session))
             {
                 throw new ArgumentException("Duplicate session!");
             }
 
             return _sessions.Remove(session);
+        }
+
+        public bool IsEmpty()
+        {
+            if (_sessions.Count == 0)
+            { 
+                return true; 
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public IEnumerator<Session> GetEnumerator()
@@ -47,6 +59,7 @@ namespace MainForm.Classes.Cinema
             return _sessions.GetEnumerator();
         }
 
+       
         public void CopyTo(Array array, int index)
         {
             if (array == null)

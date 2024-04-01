@@ -121,5 +121,23 @@ namespace MainForm.Classes.Cinema
                 }
             }
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Session otherSession = (Session)obj;
+            return Date == otherSession.Date &&
+                   Time == otherSession.Time &&
+                   HallNumber == otherSession.HallNumber;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Date, Time, HallNumber);
+        }
     }
 }

@@ -15,7 +15,6 @@ namespace MainForm.Classes.UserClasses
         private string _password;
         private string _name;
         private string _surname;
-        private SessionList _sessions;
 
         public Admin(string login, string password, string name, string surname)
         {
@@ -25,15 +24,62 @@ namespace MainForm.Classes.UserClasses
             Surname = surname;
         }
 
-        public bool AddSession(DateTime date, TimeSpan time, Halls hallNumber, string filmName)
+        public bool AddSession(DateTime date, TimeSpan time, Halls hallNumber, string filmName,SessionList sessions)
         {
             if(String.IsNullOrEmpty(filmName)) 
             {
                 throw new ArgumentNullException("Film name cannot be null or empty!");
             }
+          
+            if (!Enum.IsDefined(typeof(Halls), hallNumber))
+            {
+                throw new ArgumentOutOfRangeException("Unknown hall number!");
+            }
+
             if (date <= DateTime.Now.Date)
             {
                 return false;
+            }
+
+            sessions.AddSession(new Session(date, filmName, hallNumber, time));
+            return true;
+           
+        }
+        public bool EditSession(DateTime date, TimeSpan time, TimeSpan newTime, SessionList sessions)
+        {
+
+            if (date <= DateTime.Now.Date)
+            {
+                return false;
+            }
+
+            if (time <= DateTime.Now.TimeOfDay)
+            {
+                return false;
+            }
+            if(sessions.IsEmpty())
+            {
+                throw new ArgumentNullException("Can not edit empty list!");
+            }
+
+            Session sessionToEdit = sessions.FirstOrDefault(session =>
+                session.Date == date && session.Time == time);
+
+
+            if (sessionToEdit != null)
+            {
+                sessionToEdit.Time = newTime;
+                return true; 
+            }
+
+            return false; 
+        }
+
+        public bool DeleteSession(DateTime date, TimeSpan time, Halls hallNumber,string filmName, SessionList sessions)
+        {
+            if (String.IsNullOrEmpty(filmName))
+            {
+                throw new ArgumentNullException("Film name cannot be null or empty!");
             }
 
             if (!Enum.IsDefined(typeof(Halls), hallNumber))
@@ -41,25 +87,25 @@ namespace MainForm.Classes.UserClasses
                 throw new ArgumentOutOfRangeException("Unknown hall number!");
             }
 
-            _sessions.AddSession(new Session(date, filmName, hallNumber, time));
-            return true;
-           
-        }
-        public bool EditSession(DateTime date, TimeSpan time, TimeSpan newTime)
-        {
-            throw new NotImplementedException();
-            
-        }
-        public bool DeleteSession(DateTime date, TimeSpan time,Halls hallNumber)
-        {
-            throw new NotImplementedException();
-        }
+            if (date <= DateTime.Now.Date)
+            {
+                return false;
+            }
 
+            if (sessions.IsEmpty())
+            {
+                throw new ArgumentNullException("Can not edit empty list!");
+            }
+
+            Session sessionToDelete = new Session(date, filmName, hallNumber, time);
+
+            return sessions.RemoveSession(sessionToDelete);
+        }
         public override bool SignUp(string login, string password)
         {
-            if (String.IsNullOrEmpty(login)|| String.IsNullOrEmpty(password))
+            if (String.IsNullOrEmpty(login) || String.IsNullOrEmpty(password))
             {
-                throw new ArgumentNullException("Liogin and password cannot be null value!");
+                throw new ArgumentNullException("Login and password cannot be null value!");
             }
             if (Regex.IsMatch(password, "^[a-zA-Z]{6,}$"))
             {
@@ -69,6 +115,8 @@ namespace MainForm.Classes.UserClasses
             {
                 return false;
             }
+
+            return true;
 
         }
 
