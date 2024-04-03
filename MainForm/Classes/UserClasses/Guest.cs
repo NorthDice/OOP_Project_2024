@@ -1,4 +1,5 @@
-﻿using MainForm.Interfaces;
+﻿using MainForm.Classes.Cinema;
+using MainForm.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,29 @@ namespace MainForm.Classes.UserClasses
 {
     internal class Guest : User, IRegistration
     {
-        
-        
-        
-        public bool ViewSessions(DateTime date)
+
+
+
+        public bool ViewSessions(DateTime date, SessionList sessions)
         {
-            throw new NotImplementedException();
+
+            if(sessions.IsEmpty())
+            {
+                throw new ArgumentNullException("Can not take view sessions list is epmty!");
+            }
+            if (date < DateTime.Now.Date)
+            {
+                return false;
+            }
+
+            var sessionsOnDate = sessions.Where(session => session.Date == date);
+
+            foreach (var session in sessionsOnDate)
+            {
+                session.ViewSessionInformation();
+            }
+
+            return true;
         }
 
         public override bool SignUp(string login, string password)

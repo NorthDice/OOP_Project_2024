@@ -14,7 +14,7 @@ namespace MainForm.Classes.Cinema
         private string _filmName;
         private Halls _hallNumber;
         private TimeSpan _time;
-        private static int _count = 0;
+        public static int _count = 0;
 
         public Session(DateTime date, string filmName, Halls hallNumber, TimeSpan time)
         {
@@ -113,6 +113,7 @@ namespace MainForm.Classes.Cinema
 
         public static int CountOfGuests
         {
+            get { return _count; }
             set
             {
                 if (_count > 30)

@@ -1,4 +1,5 @@
-﻿using MainForm.Enums;
+﻿using MainForm.Classes.Cinema;
+using MainForm.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,28 +15,182 @@ namespace MainForm.Classes.UserClasses
         private string _password;
         private string _name;
         private string _surname;
-        
 
-        private string Login { get; set; }
-        private string Password { get; set; }
-        private string Name { get; set; }
-        private string Surname { get; set; }
-       
-        
 
-        public bool BuyTicket(DateTime date, TimeSpan time, Halls hallNumber, string filmName)
+
+
+        public string Login
         {
-            throw new NotImplementedException(); 
+            get { return _login; }
+            set
+            {
+                if (Regex.IsMatch(value, "^[a-zA-Z]{5,}$"))
+                {
+                    _login = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Login must contain at least 5 Latin characters.");
+                }
+            }
         }
 
-        public bool ReturnTicket(DateTime date, TimeSpan time, Halls hallNumber, string filmName)
+        public string Password
         {
-            throw new NotImplementedException(); 
+            set
+            {
+                if (Regex.IsMatch(value, "^[a-zA-Z]{6,}$"))
+                {
+                    _password = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Password must contain at least 6 Latin characters!");
+                }
+            }
         }
 
-        public void ViewSessions(DateTime date)
+        public string Name
         {
-            throw new NotImplementedException ();
+            get { return _name; }
+            set
+            {
+                if (Regex.IsMatch(value, "^[a-zA-Z]+$"))
+                {
+                    _name = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Name field must contain only Latin charecters!");
+                }
+            }
+        }
+
+
+        public string Surname
+        {
+            get { return _surname; }
+            set
+            {
+                if (Regex.IsMatch(value, "^[a-zA-Z]+$"))
+                {
+                    _surname = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Surname field must contain only Latin charecters!");
+                }
+            }
+        }
+
+
+        public bool BuyTicket(DateTime date, TimeSpan time, Halls hallNumber, string filmName, SessionList sessions)
+        {
+            if (String.IsNullOrEmpty(filmName))
+            {
+                throw new ArgumentNullException("Film name cannot be null or empty!");
+            }
+
+            if (!Enum.IsDefined(typeof(Halls), hallNumber))
+            {
+                throw new ArgumentOutOfRangeException("Unknown hall number!");
+            }
+
+            if (date < DateTime.Now.Date)
+            {
+                return false;
+            }
+
+            if (time < DateTime.Now.TimeOfDay)
+            {
+                return false;
+            }
+
+                var session = sessions.FirstOrDefault(s =>
+            s.Date == date &&
+            s.Time == time &&
+            s.HallNumber == hallNumber &&
+            s.FilmName == filmName);
+
+            if (session != null)
+            {
+                Session.CountOfGuests++;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public bool ReturnTicket(DateTime date, TimeSpan time, Halls hallNumber, string filmName, SessionList sessions)
+        {
+            if (String.IsNullOrEmpty(filmName))
+            {
+                throw new ArgumentNullException("Film name cannot be null or empty!");
+            }
+
+            if (!Enum.IsDefined(typeof(Halls), hallNumber))
+            {
+                throw new ArgumentOutOfRangeException("Unknown hall number!");
+            }
+
+            if (date < DateTime.Now.Date)
+            {
+                return false;
+            }
+
+            if (time < DateTime.Now.TimeOfDay)
+            {
+                return false;
+            }
+
+            DateTime sessionDateTime = date.Date + time;
+            TimeSpan timeRemaining = sessionDateTime - DateTime.Now;
+            if (timeRemaining.TotalHours < 6)
+            {
+                return false;
+            }
+
+
+            var session = sessions.FirstOrDefault(s =>
+           s.Date == date &&
+           s.Time == time &&
+           s.HallNumber == hallNumber &&
+           s.FilmName == filmName);
+
+            if (session != null)
+            {
+                Session.CountOfGuests--;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool ViewSessions(DateTime date, SessionList sessions)
+        {
+
+            if (sessions.IsEmpty())
+            {
+                throw new ArgumentNullException("Can not take view sessions list is epmty!");
+            }
+            if (date < DateTime.Now.Date)
+            {
+                return false;
+            }
+
+            var sessionsOnDate = sessions.Where(session => session.Date == date);
+
+            foreach (var session in sessionsOnDate)
+            {
+                session.ViewSessionInformation();
+            }
+
+            return true;
         }
 
         public override bool SignUp(string login, string password)
