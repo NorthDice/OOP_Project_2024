@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,9 @@ namespace MainForm.Classes.UserClasses
         private string _name;
         private string _surname;
 
-        public abstract bool SignUp(string login, string password);
+        public abstract bool SignUp(string login, string password,UserList users);
 
+        public abstract string Login { get; set; }
+        public abstract string Password { get; set; }
     }
 }

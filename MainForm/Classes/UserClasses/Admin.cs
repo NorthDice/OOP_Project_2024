@@ -15,13 +15,15 @@ namespace MainForm.Classes.UserClasses
         private string _password;
         private string _name;
         private string _surname;
+        private Role _userRole;
 
-        public Admin(string login, string password, string name, string surname)
+        public Admin(string login, string password, string name, string surname, Role userRole)
         {
             Login = login;
             Password = password;
             Name = name;
             Surname = surname;
+            UserRole = userRole;
         }
 
         public bool AddSession(DateTime date, TimeSpan time, Halls hallNumber, string filmName,SessionList sessions)
@@ -101,7 +103,8 @@ namespace MainForm.Classes.UserClasses
 
             return sessions.RemoveSession(sessionToDelete);
         }
-        public override bool SignUp(string login, string password)
+
+        public override bool SignUp(string login, string password, UserList users)
         {
             if (String.IsNullOrEmpty(login) || String.IsNullOrEmpty(password))
             {
@@ -116,11 +119,19 @@ namespace MainForm.Classes.UserClasses
                 return false;
             }
 
-            return true;
+            foreach (User user in users)
+            {
+                if (user.Login == login && user.Password == password)
+                {
+                    CurrentUserManager.SetCurrentUser(user);
+                    return true;
+                }
+            }
 
+            return false;
         }
 
-        public string Login
+        public override string Login
         {
             get { return _login; }
             set
@@ -136,8 +147,9 @@ namespace MainForm.Classes.UserClasses
             }
         }
 
-        public string Password
+        public override string Password
         {
+            get { return _password; }
             set
             {
                 if (Regex.IsMatch(value, "^[a-zA-Z]{6,}$"))
@@ -183,5 +195,20 @@ namespace MainForm.Classes.UserClasses
                 }
             }
         }
+
+        public Role UserRole
+        {
+            get { return _userRole; }
+            set
+            {
+                if (!Enum.IsDefined(typeof(Role), value))
+                {
+                    throw new ArgumentException("Invalid user role!");
+                }
+                _userRole = value;
+            }
+        }
+
+       
     }
 }

@@ -10,13 +10,16 @@ namespace MainForm.EventsDelegates
     {
         public delegate void SixHoursBeforeSessionHandler(DateTime sessionTime);
 
-        public class SessionScheduler
-        {
-            public event SixHoursBeforeSessionHandler SixHoursBeforeSession;
+        public event SixHoursBeforeSessionHandler SixHoursBeforeSession;
 
-            public void ScheduleSession(DateTime sessionTime)
+        public void ScheduleSession(DateTime sessionTime)
+        {
+           
+            DateTime sixHoursBefore = sessionTime.AddHours(-6);
+            if (DateTime.Now >= sixHoursBefore)
             {
-                throw new NotImplementedException();
+                
+                SixHoursBeforeSession?.Invoke(sessionTime);
             }
         }
     }
