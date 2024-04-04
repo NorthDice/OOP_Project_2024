@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace MainForm.Classes.Cinema
 {
@@ -29,12 +30,17 @@ namespace MainForm.Classes.Cinema
         {
             session = session ?? throw new ArgumentNullException(nameof(session), "Session can not be null value!");
 
-            if (_sessions.Contains(session))
+            if (!_sessions.Contains(session))
             {
-                throw new ArgumentException("Duplicate session!");
+                throw new ArgumentException("Session not found!");
             }
 
             return _sessions.Remove(session);
+        }
+
+        public void Clear()
+        {
+            _sessions.Clear();
         }
 
         public bool IsEmpty()

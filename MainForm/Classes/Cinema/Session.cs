@@ -36,18 +36,19 @@ namespace MainForm.Classes.Cinema
             SessionStarted?.Invoke(this, EventArgs.Empty);
         }
 
-        public bool ReturnTicket(DateTime currentDateTime)
-        {
-            
-            TimeSpan timeRemaining = Date - currentDateTime;
+        //public bool ReturnTicket(DateTime currentDateTime)
+        //{
+        //    TimeSpan timeRemaining = Date - currentDateTime;
 
-            if (timeRemaining.TotalHours < 6 || _count > 30)
-            {
-                return false;
-            }
-            
-            return true;
-        }
+        //    Console.WriteLine($"CurrentDateTime: {currentDateTime}, Date: {Date}, TimeRemaining: {timeRemaining}");
+
+        //    if (timeRemaining.TotalHours < 6 || _count > 30)
+        //    {
+        //        return false;
+        //    }
+
+        //    return true;
+        //}
 
         public void ViewSessionInformation()
         {
@@ -64,12 +65,14 @@ namespace MainForm.Classes.Cinema
             get { return _date; }
             set
             {
-                if (value < DateTime.Now)
+                if (value < DateTime.Today)
                 {
                     throw new ArgumentOutOfRangeException("Date cannot be in the past");
                 }
+                _date = value;
             }
         }
+
 
         public TimeSpan Time
         {
