@@ -35,24 +35,10 @@ namespace MainForm.Classes.Cinema
         {
             SessionStarted?.Invoke(this, EventArgs.Empty);
         }
-
-        //public bool ReturnTicket(DateTime currentDateTime)
-        //{
-        //    TimeSpan timeRemaining = Date - currentDateTime;
-
-        //    Console.WriteLine($"CurrentDateTime: {currentDateTime}, Date: {Date}, TimeRemaining: {timeRemaining}");
-
-        //    if (timeRemaining.TotalHours < 6 || _count > 30)
-        //    {
-        //        return false;
-        //    }
-
-        //    return true;
-        //}
-
-        public void ViewSessionInformation()
+        public void ViewSessionInformation(ListBox listBox)
         {
-            Console.WriteLine($"Film name: {FilmName}\n Session date: {Date}\n Session hall {HallNumber}");
+            string sessionInfo = $"Film name: {FilmName}\n Session date: {Date}\n Session hall: {HallNumber}";
+            listBox.Items.Add(sessionInfo);
         }
 
         public void DisplayDescription(string filmName, string director, int year, string description)
@@ -74,16 +60,17 @@ namespace MainForm.Classes.Cinema
         }
 
 
+     
+
         public TimeSpan Time
         {
             get { return _time; }
             set
             {
-                if (value < DateTime.Now.TimeOfDay)
+                if (value < TimeSpan.Zero)
                 {
-                    throw new ArgumentOutOfRangeException("Time cannot be in the past");
+                    throw new ArgumentOutOfRangeException("Time cannot be negative");
                 }
-
                 _time = value;
             }
         }

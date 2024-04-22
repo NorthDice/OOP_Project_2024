@@ -36,9 +36,7 @@ namespace Tests
             // Act
             sessionList.AddSession(null);
 
-            // Assert
-            // ExpectedExceptionAttribute указывает, что ожидается исключение типа ArgumentNullException
-            // поэтому нет необходимости в дополнительных assert-утверждениях здесь
+           
         }
 
         [TestMethod]
@@ -69,9 +67,7 @@ namespace Tests
             // Act
             sessionList.RemoveSession(session);
 
-            // Assert
-            // Ожидаем, что метод RemoveSession выбросит исключение ArgumentException,
-            // поэтому нет необходимости в дополнительных assert-утверждениях здесь
+           
         }
         [TestMethod]
         public void Clear_ShouldRemoveAllSessionsFromList()

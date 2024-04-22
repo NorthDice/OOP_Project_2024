@@ -9,6 +9,6 @@ namespace MainForm.Interfaces
 {
     public interface ISessionDescriprion
     {
-        void DisplayDescription(string filmName,string director, int yeat, string description);
+        void DisplayDescription(string filmName,string director, int year, string description);
     }
 }

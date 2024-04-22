@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MainForm.Classes.UserClasses
 {
-    internal class Admin : User
+    public class Admin : User
     {
         private string _login;
         private string _password;
@@ -19,7 +19,7 @@ namespace MainForm.Classes.UserClasses
 
         public Admin(string login, string password, string name, string surname, Role userRole)
         {
-            Login = login;
+            _login = login;
             Password = password;
             Name = name;
             Surname = surname;
@@ -49,44 +49,43 @@ namespace MainForm.Classes.UserClasses
         }
         public bool EditSession(DateTime date, TimeSpan time, TimeSpan newTime, SessionList sessions)
         {
-
-            if (date <= DateTime.Now.Date)
+            if (date < DateTime.Now.Date )
             {
-                return false;
+                return false; 
             }
 
-            if (time <= DateTime.Now.TimeOfDay)
+            if (date == DateTime.Now.Date && newTime <= DateTime.Now.TimeOfDay)
             {
-                return false;
+                return false ;
             }
-            if(sessions.IsEmpty())
+            if (sessions.IsEmpty())
             {
-                throw new ArgumentNullException("Can not edit empty list!");
+                throw new ArgumentNullException("Session list cannot be empty");
             }
 
             Session sessionToEdit = sessions.FirstOrDefault(session =>
                 session.Date == date && session.Time == time);
 
-
             if (sessionToEdit != null)
             {
                 sessionToEdit.Time = newTime;
-                return true; 
+                return true;
             }
 
-            return false; 
+            return false;
         }
 
-        public bool DeleteSession(DateTime date, TimeSpan time, Halls hallNumber,string filmName, SessionList sessions)
+
+        public bool DeleteSession(DateTime date, TimeSpan time, Halls hallNumber, string filmName, SessionList sessions)
         {
             if (String.IsNullOrEmpty(filmName))
             {
-                throw new ArgumentNullException("Film name cannot be null or empty!");
+                throw new ArgumentNullException(nameof(filmName), "Film name cannot be null or empty!");
             }
 
             if (!Enum.IsDefined(typeof(Halls), hallNumber))
             {
-                throw new ArgumentOutOfRangeException("Unknown hall number!");
+                throw new ArgumentOutOfRangeException(nameof(hallNumber), "Unknown hall number!");
             }
 
             if (date <= DateTime.Now.Date)
@@ -96,7 +95,7 @@ namespace MainForm.Classes.UserClasses
 
             if (sessions.IsEmpty())
             {
-                throw new ArgumentNullException("Can not edit empty list!");
+                throw new ArgumentNullException(nameof(sessions), "Session list cannot be empty");
             }
 
             Session sessionToDelete = new Session(date, filmName, hallNumber, time);
@@ -178,7 +177,6 @@ namespace MainForm.Classes.UserClasses
                 }
             }
         }
-
 
         public string Surname
         {

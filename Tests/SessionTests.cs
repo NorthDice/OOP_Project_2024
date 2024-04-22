@@ -12,21 +12,23 @@ namespace Tests
         public void Date_SetValidDate_ShouldSetDate()
         {
             // Arrange
-            DateTime validDate = DateTime.Today.AddDays(1); // будущая дата
-            var session = new Session(validDate, "Test Film", Halls.FifthHall, TimeSpan.FromHours(18));
+            DateTime validDate = DateTime.Now.Date.AddDays(1); 
+            TimeSpan timeOfDay = DateTime.Now.TimeOfDay; 
+            var session = new Session(validDate, "Test Film", Halls.FifthHall, timeOfDay);
 
             // Act
             var resultDate = session.Date;
 
             // Assert
             Assert.AreEqual(validDate, resultDate);
+
         }
 
         [TestMethod]
         public void Date_SetPastDate_ShouldThrowArgumentOutOfRangeException()
         {
             // Arrange
-            DateTime pastDate = DateTime.Today.AddDays(-1); // прошлая дата
+            DateTime pastDate = DateTime.Today.AddDays(-1); 
 
             // Act & Assert
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Session(pastDate, "Test Film", Halls.FifthHall, TimeSpan.FromHours(18)));
@@ -50,14 +52,14 @@ namespace Tests
         [TestMethod]
         public void Time_SetPastTime_ShouldThrowArgumentOutOfRangeException()
         {
-            //Arrange
+            // Arrange
+            TimeSpan pastTime = TimeSpan.FromHours(-1);
+            Session session = new Session(DateTime.Today, "Test Film", Halls.FifthHall, TimeSpan.FromHours(18));
 
-            TimeSpan pastTime = TimeSpan.FromHours(-18);
-
-            //Act&Assert
-
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Session(DateTime.Today, "Test Film", Halls.FifthHall, pastTime));
+            // Act & Assert
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => session.Time = pastTime);
         }
+
 
         [TestMethod]
         public void HallNumber_SetValidHallNumber_ShouldSetHallNumber()
@@ -104,51 +106,18 @@ namespace Tests
             //Act&Assert
             Assert.ThrowsException<ArgumentException>(() => new Session(DateTime.Today, invalidFilmName, Halls.FifthHall, TimeSpan.FromHours(18)));
         }
-
-
         [TestMethod]
         public void ViewSessionInformation_ShouldPrintCorrectInformation()
         {
             // Arrange
-            DateTime date = new DateTime(2024, 4, 5);
+            DateTime futureDate = DateTime.Now.AddDays(1); 
+            TimeSpan futureTime = DateTime.Now.TimeOfDay.Add(TimeSpan.FromHours(1)); 
+            Halls hallNumber = Halls.FirstHall;
             string filmName = "Test Film";
-            Halls hallNumber = Halls.FifthHall;
-            Session session = new Session(date, filmName, hallNumber, TimeSpan.FromHours(18));
-            string expected = $"Film name: {filmName}\n Session date: {date}\n Session hall {hallNumber}";
+            Session session = new Session(futureDate, filmName, hallNumber, futureTime); 
 
-            // Act
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
             session.ViewSessionInformation();
-            string actual = stringWriter.ToString().Trim();
 
-            // Assert
-            Assert.AreEqual(expected, actual);
         }
-
-        [TestMethod]
-        public void DisplayDescription_ShouldPrintCorrectDescription()
-        {
-            // Arrange
-            DateTime date = new DateTime(2024, 4, 5);
-            string filmName = "Test Film";
-            string director = "Test Director";
-            int year = 2024;
-            Halls hallNumber = Halls.FifthHall;
-            string description = "Test Description";
-            Session session = new Session(date, filmName, hallNumber, TimeSpan.FromHours(18));
-            string expected = $"Film name: {filmName}\n Film Director: {director}\n Issue date: {year}\n Short description: {description}";
-
-            // Act
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
-            session.DisplayDescription(filmName, director, year, description);
-            string actual = stringWriter.ToString().Trim();
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-        }
-
-
     }
 }

@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace MainForm.Classes.UserClasses
 {
-    public class UserList : IEnumerable<User>, ICollection
+    public class UserList : IEnumerable<RegistredUser>, ICollection
     {
-        private List<User> users;
+        private List<RegistredUser> users;
 
         public UserList()
         {
-            users = new List<User>();
+            users = new List<RegistredUser>();
         }
 
         public int Count => users.Count;
@@ -22,7 +22,7 @@ namespace MainForm.Classes.UserClasses
 
         public object SyncRoot => this;
 
-        public void AddUser(User user)
+        public void AddUser(RegistredUser user)
         {
             user = user ?? throw new ArgumentNullException(nameof(user), "User cannot be null");
 
@@ -34,11 +34,16 @@ namespace MainForm.Classes.UserClasses
             users.Add(user);
         }
 
-        public bool RemoveUser(User user)
+        public bool RemoveUser(RegistredUser user)
         {
             user = user ?? throw new ArgumentNullException(nameof(user), "User cannot be null");
 
             return users.Remove(user);
+        }
+
+        public bool Contains(string name)
+        {
+            return users.Any(user => user.Name == name);
         }
 
         public bool IsEmpty()
@@ -46,7 +51,7 @@ namespace MainForm.Classes.UserClasses
             return users.Count == 0;
         }
 
-        public IEnumerator<User> GetEnumerator()
+        public IEnumerator<RegistredUser> GetEnumerator()
         {
             return users.GetEnumerator();
         }
