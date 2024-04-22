@@ -15,13 +15,12 @@ namespace MainForm
 {
     public partial class RegistredUserForm : Form
     {
-
         SessionList sessions;
         RegistredUser user;
-        public RegistredUserForm()
+        public RegistredUserForm(SessionList sessions)
         {
             InitializeComponent();
-            sessions = new SessionList();
+            this.sessions = sessions;
             user = new RegistredUser("example_login", "examplepassword", "John", "Doe", Role.RegistredUser);
         }
 
@@ -58,19 +57,23 @@ namespace MainForm
             {
                 MessageBox.Show(ex.Message);
             }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonBuy_Click(object sender, EventArgs e)
         {
 
-
-            DateTime selectedDate = dateTimePickerForSession.Value.Date;
-            TimeSpan selectedTime = TimeSpan.Parse(textBoxTime.Text);
-            Halls selectedHall = (Halls)Enum.Parse(typeof(Halls), textBoxHall.Text);
-            string selectedFilm = textBoxFilmName.Text;
-
             try
             {
+                DateTime selectedDate = dateTimePickerForSession.Value.Date;
+                TimeSpan selectedTime = TimeSpan.Parse(textBoxTime.Text);
+                Halls selectedHall = (Halls)Enum.Parse(typeof(Halls), textBoxHall.Text);
+                string selectedFilm = textBoxFilmName.Text;
+
+           
                 bool success = user.BuyTicket(selectedDate, selectedTime, selectedHall, selectedFilm, sessions);
 
                 if (success)
@@ -91,6 +94,10 @@ namespace MainForm
                 MessageBox.Show(ex.Message);
             }
             catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -116,11 +123,18 @@ namespace MainForm
                     MessageBox.Show("Failed to return ticket. Please check the selected session details.");
                 }
             }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show(ex.Message);
             }
-
         }
     }
 }

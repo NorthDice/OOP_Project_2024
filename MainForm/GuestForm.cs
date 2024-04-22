@@ -8,10 +8,10 @@ namespace MainForm
     public partial class GuestForm : Form
     {
         SessionList sessions;
-        public GuestForm()
+        public GuestForm(SessionList sessions)
         {
             InitializeComponent();
-            sessions = new SessionList();
+            this.sessions = sessions;
         }
 
         private void buttonView_Click(object sender, EventArgs e)
@@ -30,21 +30,19 @@ namespace MainForm
            
             try
             {
-                bool success = guest.ViewSessions(selectedDate, sessions, SessionlistBox);
-
-                if (!success)
+                bool isTrue = guest.ViewSessions(selectedDate, sessions, SessionlistBox);
+                if (!isTrue)
                 {
                     MessageBox.Show("Cannot view sessions for the selected date.");
-                }
-                else 
-                { 
-                  
-                
                 }
             }
             catch (ArgumentNullException ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            catch(Exception ex)
+            { 
+                MessageBox.Show(ex.Message); 
             }
         }
     }

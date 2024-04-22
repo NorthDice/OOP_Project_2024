@@ -17,3 +17,5 @@ C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-wi
 C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.AdminForm.resources
 C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.RegistredUserForm.resources
 C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.GuestForm.resources
+C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.RegistrationForm.resources
+C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.LoginForm.resources

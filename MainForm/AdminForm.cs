@@ -18,10 +18,10 @@ namespace MainForm
         SessionList sessions;
         Admin admin;
 
-        public AdminForm()
+        public AdminForm(SessionList sessions)
         {
             InitializeComponent();
-            sessions = new SessionList();
+            this.sessions = sessions;
             admin = new Admin("admin123", "password", "Johnss", "Dossse", Role.Admin);
 
         }
@@ -54,12 +54,12 @@ namespace MainForm
             string filmName = textBoxFilmName.Text;
             Halls hallNumber = (Halls)Enum.Parse(typeof(Halls), textBoxHall.Text);
 
-            // Пытаемся удалить сеанс
+            
             try
             {
-                bool success = admin.DeleteSession(date, time, hallNumber, filmName, sessions);
+                bool isTrue = admin.DeleteSession(date, time, hallNumber, filmName, sessions);
 
-                if (success)
+                if (isTrue)
                 {
                     MessageBox.Show("Session successfully deleted.");
 

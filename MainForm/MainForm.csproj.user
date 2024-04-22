@@ -7,6 +7,12 @@
     <Compile Update="GuestForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="RegistredUserForm.cs">
       <SubType>Form</SubType>
     </Compile>

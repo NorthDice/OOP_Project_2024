@@ -1,3 +1,6 @@
+using MainForm.Classes.Cinema;
+using MainForm.Classes.UserClasses;
+
 namespace MainForm
 {
     internal static class Program
@@ -8,10 +11,17 @@ namespace MainForm
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            // Создаем экземпляр SessionList
+            SessionList sessions = new SessionList();
+            UserList users = new UserList();
+           Guest guest = new Guest();
+            // Запускаем приложение, передавая экземпляр SessionList в форму RegistredUserForm
             ApplicationConfiguration.Initialize();
-            Application.Run(new RegistredUserForm());
+            //RegistredUserForm registredUserForm = new RegistredUserForm(sessions);
+           LoginForm loginForm = new LoginForm(guest,users);
+            loginForm.Show();
+            Application.Run(new RegistrationForm(guest,users));
+          
         }
     }
 }

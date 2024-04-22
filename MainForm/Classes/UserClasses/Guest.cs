@@ -14,6 +14,10 @@ namespace MainForm.Classes.UserClasses
 {
     public class Guest : User, IRegistration
     {
+        private string _login;
+        private string _password;
+        private string _name;
+        private string _surname;
 
         public bool ViewSessions(DateTime date, SessionList sessions, ListBox listBox)
         {
@@ -103,7 +107,67 @@ namespace MainForm.Classes.UserClasses
             return true;
         }
 
-        public override string Login { get; set; }
-        public override string Password { get; set; }
+        public override string Login
+        {
+            get { return _login; }
+            set
+            {
+                if (Regex.IsMatch(value, "^[a-zA-Z]{5,}$"))
+                {
+                    _login = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Login must contain at least 5 Latin characters.");
+                }
+            }
+        }
+
+        public override string Password
+        {
+            get { return _password; }
+            set
+            {
+                if (Regex.IsMatch(value, "^[a-zA-Z]{6,}$"))
+                {
+                    _password = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Password must contain at least 6 Latin characters!");
+                }
+            }
+        }
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                if (Regex.IsMatch(value, "^[a-zA-Z]+$"))
+                {
+                    _name = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Name field must contain only Latin charecters!");
+                }
+            }
+        }
+
+        public string Surname
+        {
+            get { return _surname; }
+            set
+            {
+                if (Regex.IsMatch(value, "^[a-zA-Z]+$"))
+                {
+                    _surname = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Surname field must contain only Latin charecters!");
+                }
+            }
+        }
     }
 }
