@@ -1,7 +1,11 @@
 ﻿using MainForm.Classes.Cinema;
 using MainForm.Enums;
+using MainForm.Interfaces;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -142,7 +146,7 @@ namespace MainForm.Classes.UserClasses
                 }
                 else
                 {
-                    throw new ArgumentException("Login must contain at least 5 Latin characters.");
+                    throw new ArgumentException("Registration is not possible!The login and password must contain only latin letters and numbers! ");
                 }
             }
         }
@@ -158,7 +162,7 @@ namespace MainForm.Classes.UserClasses
                 }
                 else
                 {
-                    throw new ArgumentException("Password must contain at least 6 Latin characters!");
+                    throw new ArgumentException("Registration is not possible!The login and password must contain only latin letters and numbers!");
                 }
             }
         }
@@ -178,6 +182,39 @@ namespace MainForm.Classes.UserClasses
                 }
             }
         }
+
+        public bool ViewSessions(DateTime date, SessionList sessions, ListBox listBox)
+        {
+            listBox.Items.Clear();
+
+            if (sessions.IsEmpty())
+            {
+                throw new ArgumentNullException("Cannot view sessions list is empty!");
+            }
+            if (date < DateTime.Now.Date)
+            {
+                return false;
+            }
+
+            List<Session> sessionsOnDate = new List<Session>();
+
+            foreach (var session in sessions)
+            {
+                if (session.Date.Date == date.Date)
+                {
+                    sessionsOnDate.Add(session);
+                }
+            }
+
+            foreach (var session in sessionsOnDate)
+            {
+                Debug.WriteLine($"Session date: {session.Date}");
+                session.ViewSessionInformation(listBox);
+            }
+
+            return true;
+        }
+
 
         public override string Surname
         {

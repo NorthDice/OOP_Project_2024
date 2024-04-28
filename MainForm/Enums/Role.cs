@@ -10,7 +10,8 @@ namespace MainForm.Enums
     {
         Admin = 0,
         RegistredUser = 1,
-        None = 2 
+        Guest = 2,
+        None = 3 
     }
 
 }

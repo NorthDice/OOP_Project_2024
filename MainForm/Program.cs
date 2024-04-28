@@ -12,19 +12,9 @@ namespace MainForm
         [STAThread]
         static void Main()
         {
-
-            //SessionList sessions = new SessionList();
             SessionList sessions = JsonManager.ReadFromFile<SessionList>(@"C:\Visual Studio Projects\OOP_Project_2024_Balychev\json", "sessions.json");
 
-            //"C:\Visual Studio Projects\OOP_Project_2024_Balychev\json\sessions.json"
             UserList users = JsonManager.ReadUserListFromFile(@"C:\Visual Studio Projects\OOP_Project_2024_Balychev\json", "users.json");
-            //JsonManager.ReadFromFile<UserList>("C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\json", "sessions.json");
-
-
-
-
-
-
 
             Guest guest = new Guest();
             

@@ -41,18 +41,22 @@
             // 
             // buttonRegistration
             // 
-            buttonRegistration.Location = new Point(322, 371);
+            buttonRegistration.BackColor = SystemColors.ControlLight;
+            buttonRegistration.FlatAppearance.BorderSize = 0;
+            buttonRegistration.FlatStyle = FlatStyle.Flat;
+            buttonRegistration.ForeColor = SystemColors.WindowText;
+            buttonRegistration.Location = new Point(218, 291);
             buttonRegistration.Name = "buttonRegistration";
-            buttonRegistration.Size = new Size(147, 40);
+            buttonRegistration.Size = new Size(165, 51);
             buttonRegistration.TabIndex = 0;
             buttonRegistration.Text = "Registration";
-            buttonRegistration.UseVisualStyleBackColor = true;
+            buttonRegistration.UseVisualStyleBackColor = false;
             buttonRegistration.Click += buttonRegistration_Click;
             // 
             // labelLogin
             // 
             labelLogin.AutoSize = true;
-            labelLogin.Location = new Point(178, 99);
+            labelLogin.Location = new Point(82, 40);
             labelLogin.Name = "labelLogin";
             labelLogin.Size = new Size(46, 20);
             labelLogin.TabIndex = 1;
@@ -61,7 +65,7 @@
             // labelPassword
             // 
             labelPassword.AutoSize = true;
-            labelPassword.Location = new Point(178, 161);
+            labelPassword.Location = new Point(82, 102);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(70, 20);
             labelPassword.TabIndex = 2;
@@ -70,7 +74,7 @@
             // labelName
             // 
             labelName.AutoSize = true;
-            labelName.Location = new Point(178, 223);
+            labelName.Location = new Point(82, 164);
             labelName.Name = "labelName";
             labelName.Size = new Size(49, 20);
             labelName.TabIndex = 3;
@@ -79,7 +83,7 @@
             // labelSurname
             // 
             labelSurname.AutoSize = true;
-            labelSurname.Location = new Point(178, 288);
+            labelSurname.Location = new Point(82, 229);
             labelSurname.Name = "labelSurname";
             labelSurname.Size = new Size(67, 20);
             labelSurname.TabIndex = 4;
@@ -87,37 +91,46 @@
             // 
             // textBoxLogin
             // 
-            textBoxLogin.Location = new Point(279, 96);
+            textBoxLogin.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxLogin.BorderStyle = BorderStyle.None;
+            textBoxLogin.Location = new Point(183, 37);
             textBoxLogin.Name = "textBoxLogin";
-            textBoxLogin.Size = new Size(247, 27);
+            textBoxLogin.Size = new Size(247, 20);
             textBoxLogin.TabIndex = 5;
             // 
             // textBoxPassword
             // 
-            textBoxPassword.Location = new Point(279, 161);
+            textBoxPassword.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxPassword.BorderStyle = BorderStyle.None;
+            textBoxPassword.Location = new Point(183, 102);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(247, 27);
+            textBoxPassword.Size = new Size(247, 20);
             textBoxPassword.TabIndex = 6;
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(279, 223);
+            textBoxName.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxName.BorderStyle = BorderStyle.None;
+            textBoxName.Location = new Point(183, 164);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(247, 27);
+            textBoxName.Size = new Size(247, 20);
             textBoxName.TabIndex = 7;
             // 
             // textBoxSurname
             // 
-            textBoxSurname.Location = new Point(279, 288);
+            textBoxSurname.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxSurname.BorderStyle = BorderStyle.None;
+            textBoxSurname.Location = new Point(183, 229);
             textBoxSurname.Name = "textBoxSurname";
-            textBoxSurname.Size = new Size(247, 27);
+            textBoxSurname.Size = new Size(247, 20);
             textBoxSurname.TabIndex = 8;
             // 
             // RegistrationForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(176, 164, 165);
+            ClientSize = new Size(576, 366);
             Controls.Add(textBoxSurname);
             Controls.Add(textBoxName);
             Controls.Add(textBoxPassword);

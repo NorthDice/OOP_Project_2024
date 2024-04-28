@@ -33,7 +33,7 @@ namespace MainForm
         {
             try
             {
-                AdminForm adminForm = new AdminForm(sessions,users);
+               
                 string guestLogin = textBoxLogin.Text;
                 string guestPassword = textBoxPassword.Text;
 
@@ -47,37 +47,22 @@ namespace MainForm
                     if (currentUser.UserRole == Role.RegistredUser)
                     {
                         CloseForm(this);
-                        //RegistredUser registeredUser = (RegistredUser)currentUser;
+                        RegistredUser registeredUser = (RegistredUser)currentUser;
                         RegistredUserForm registred = new RegistredUserForm(sessions);
                         registred.Show();
                     }
-                    else if(currentUser.UserRole == Role.Admin)
+                    else //if(currentUser.UserRole == Role.Admin)
                     {
-                        // Обработка администратора
+                        
                         CloseForm(this);
-                        //Admin admin = (Admin)currentUser;
+                        AdminForm adminForm = new AdminForm(sessions, users);
+                        Admin admin = (Admin)currentUser;
                         adminForm.Show();
                     }
-                    //MessageBox.Show("Successfully logged!");
-                    //CloseForm(this);
-
-                    //RegistredUser registredUser = new RegistredUser();
-                    //registredUser = (RegistredUser)CurrentUserManager.GetCurrentUser();
-
-                    //if(registredUser.UserRole == Role.RegistredUser)
-                    ////RegistredUser registredUser = new RegistredUser(guest.Login, guest.Password, guest.Surname, guest.Name , Role.RegistredUser);
-
-
-
-                    //{
-                    //    RegistredUserForm registred = new RegistredUserForm(sessions);
-                    //    registred.Show();
-                    //}
                 }
                 else
                 {
-                   
-                    adminForm.Show();
+                    MessageBox.Show("Logining failed! \n Please check your login & password and try again!");
                 }
             }
             catch (ArgumentException ex) 
@@ -88,7 +73,6 @@ namespace MainForm
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void CloseForm(Form formToClose)

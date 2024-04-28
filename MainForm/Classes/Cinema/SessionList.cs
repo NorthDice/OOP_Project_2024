@@ -28,26 +28,6 @@ namespace MainForm.Classes.Cinema
 
         public bool IsReadOnly => false;
 
-        //public void AddSession(Session session)
-        //{
-
-        //    session = session ?? throw new ArgumentNullException(nameof(session), "Session can not be null value!");
-
-        //    _sessions.Add(session);
-        //}
-
-        //public bool RemoveSession(Session session)
-        //{
-        //    session = session ?? throw new ArgumentNullException(nameof(session), "Session can not be null value!");
-
-        //    if (!_sessions.Contains(session))
-        //    {
-        //        throw new ArgumentException("Session not found!");
-        //    }
-
-        //    return _sessions.Remove(session);
-        //}
-
         public void Clear()
         {
             _sessions.Clear();

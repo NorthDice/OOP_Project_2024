@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace MainForm
 {
@@ -26,14 +28,6 @@ namespace MainForm
 
         private void buttonViewSession_Click(object sender, EventArgs e)
         {
-            Session session1 = new Session(DateTime.Today, "Film 1", Halls.FirstHall, new TimeSpan(10, 0, 0));
-            Session session2 = new Session(DateTime.Now.Date, "Film 2", Halls.SecondHall, new TimeSpan(13, 0, 0));
-            Session session3 = new Session(DateTime.Now.Date, "Film 3", Halls.ThirdHall, new TimeSpan(16, 0, 0));
-
-            sessions.Add(session1);
-            sessions.Add(session2);
-            sessions.Add(session3);
-
             try
             {
 
@@ -42,11 +36,7 @@ namespace MainForm
            
                 bool isViewed = user.ViewSessions(selectedDate, sessions, SessionlistBox);
 
-                if (isViewed)
-                {
-                    MessageBox.Show("Sessions viewed successfully.");
-                }
-                else
+                if (!isViewed)
                 {
                     MessageBox.Show("Cannot view sessions for the selected date.");
                 }
@@ -68,11 +58,12 @@ namespace MainForm
             {
                 DateTime selectedDate = dateTimePickerForSession.Value.Date;
                 TimeSpan selectedTime = TimeSpan.Parse(textBoxTime.Text);
+                DateTime combinedDateTime = selectedDate.Add(selectedTime);
                 Halls selectedHall = (Halls)Enum.Parse(typeof(Halls), textBoxHall.Text);
                 string selectedFilm = textBoxFilmName.Text;
 
            
-                bool isBought = user.BuyTicket(selectedDate, selectedTime, selectedHall, selectedFilm, sessions);
+                bool isBought = user.BuyTicket(combinedDateTime, selectedTime, selectedHall, selectedFilm, sessions);
 
                 if (isBought)
                 {
@@ -109,10 +100,11 @@ namespace MainForm
             {
                 DateTime selectedDate = dateTimePickerForSession.Value.Date;
                 TimeSpan selectedTime = TimeSpan.Parse(textBoxTime.Text);
+                DateTime combinedDateTime = selectedDate.Add(selectedTime);
                 Halls selectedHall = (Halls)Enum.Parse(typeof(Halls), textBoxHall.Text);
                 string selectedFilm = textBoxFilmName.Text;
 
-                bool isReturned = user.ReturnTicket(selectedDate, selectedTime, selectedHall, selectedFilm, sessions);
+                bool isReturned = user.ReturnTicket(combinedDateTime, selectedTime, selectedHall, selectedFilm, sessions);
 
                 if (isReturned)
                 {

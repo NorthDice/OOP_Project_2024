@@ -17,7 +17,7 @@ namespace MainForm.Classes.UserClasses
         private string _password;
         private string _name;
         private string _surname;
-        private Role _userRole = (Role)1;
+        private Role _userRole;
         
         public RegistredUser() {     }
         public RegistredUser(string login,string password,string name,string surname,Role userRole = Role.RegistredUser) 
@@ -195,7 +195,7 @@ namespace MainForm.Classes.UserClasses
                 }
                 else
                 {
-                    throw new ArgumentException("Login must contain at least 5 Latin characters.");
+                    throw new ArgumentException("Registration is not possible!The login and password must contain only latin letters and numbers! ");
                 }
             }
         }
@@ -212,7 +212,7 @@ namespace MainForm.Classes.UserClasses
                 }
                 else
                 {
-                    throw new ArgumentException("Password must contain at least 6 Latin characters!");
+                    throw new ArgumentException("Registration is not possible!The login and password must contain only latin letters and numbers! ");
                 }
             }
         }

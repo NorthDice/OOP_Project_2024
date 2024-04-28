@@ -43,32 +43,42 @@
             // 
             // buttonViewSession
             // 
+            buttonViewSession.BackColor = SystemColors.ControlLight;
+            buttonViewSession.FlatAppearance.BorderSize = 0;
+            buttonViewSession.FlatStyle = FlatStyle.Flat;
             buttonViewSession.Location = new Point(25, 53);
             buttonViewSession.Name = "buttonViewSession";
             buttonViewSession.Size = new Size(124, 29);
             buttonViewSession.TabIndex = 0;
             buttonViewSession.Text = "View Sessions";
-            buttonViewSession.UseVisualStyleBackColor = true;
+            buttonViewSession.UseVisualStyleBackColor = false;
             buttonViewSession.Click += buttonViewSession_Click;
             // 
             // buttonBuy
             // 
+            buttonBuy.BackColor = SystemColors.ControlLight;
+            buttonBuy.FlatAppearance.BorderSize = 0;
+            buttonBuy.FlatStyle = FlatStyle.Flat;
+            buttonBuy.ForeColor = SystemColors.ActiveCaptionText;
             buttonBuy.Location = new Point(25, 218);
             buttonBuy.Name = "buttonBuy";
             buttonBuy.Size = new Size(114, 29);
             buttonBuy.TabIndex = 1;
             buttonBuy.Text = "Buy ticket";
-            buttonBuy.UseVisualStyleBackColor = true;
+            buttonBuy.UseVisualStyleBackColor = false;
             buttonBuy.Click += buttonBuy_Click;
             // 
             // buttonReturn
             // 
+            buttonReturn.BackColor = SystemColors.ControlLight;
+            buttonReturn.FlatAppearance.BorderSize = 0;
+            buttonReturn.FlatStyle = FlatStyle.Flat;
             buttonReturn.Location = new Point(25, 276);
             buttonReturn.Name = "buttonReturn";
             buttonReturn.Size = new Size(114, 29);
             buttonReturn.TabIndex = 2;
             buttonReturn.Text = "Return ticket";
-            buttonReturn.UseVisualStyleBackColor = true;
+            buttonReturn.UseVisualStyleBackColor = false;
             buttonReturn.Click += buttonReturn_Click;
             // 
             // dateTimePickerForSession
@@ -81,30 +91,36 @@
             // SessionlistBox
             // 
             SessionlistBox.FormattingEnabled = true;
-            SessionlistBox.Location = new Point(254, 230);
+            SessionlistBox.Location = new Point(207, 218);
             SessionlistBox.Name = "SessionlistBox";
-            SessionlistBox.Size = new Size(448, 184);
+            SessionlistBox.Size = new Size(519, 184);
             SessionlistBox.TabIndex = 4;
             // 
             // textBoxTime
             // 
+            textBoxTime.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxTime.BorderStyle = BorderStyle.None;
             textBoxTime.Location = new Point(207, 137);
             textBoxTime.Name = "textBoxTime";
-            textBoxTime.Size = new Size(125, 27);
+            textBoxTime.Size = new Size(125, 20);
             textBoxTime.TabIndex = 6;
             // 
             // textBoxFilmName
             // 
+            textBoxFilmName.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxFilmName.BorderStyle = BorderStyle.None;
             textBoxFilmName.Location = new Point(361, 137);
             textBoxFilmName.Name = "textBoxFilmName";
-            textBoxFilmName.Size = new Size(125, 27);
+            textBoxFilmName.Size = new Size(125, 20);
             textBoxFilmName.TabIndex = 7;
             // 
             // textBoxHall
             // 
+            textBoxHall.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxHall.BorderStyle = BorderStyle.None;
             textBoxHall.Location = new Point(516, 137);
             textBoxHall.Name = "textBoxHall";
-            textBoxHall.Size = new Size(125, 27);
+            textBoxHall.Size = new Size(125, 20);
             textBoxHall.TabIndex = 8;
             // 
             // labelTime
@@ -138,6 +154,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(176, 164, 165);
             ClientSize = new Size(800, 450);
             Controls.Add(labelHall);
             Controls.Add(labelFilmName);

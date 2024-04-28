@@ -24,8 +24,8 @@ namespace MainForm
             InitializeComponent();
             this.sessions = sessions;
             this.users = users;
-            //admin = new Admin("adminn", "adminn", "Johnss", "Dossse", Role.Admin);
-            //users.AddUser(admin);
+            admin = new Admin("adminn", "adminn", "Johnss", "Dossse", Role.Admin);
+            users.Add(admin);
             sessions.SessionsUpdated += Sessions_Updated;
         }
 
@@ -35,11 +35,12 @@ namespace MainForm
             {
                 DateTime date = dateTimePickerDate.Value.Date;
                 TimeSpan time = TimeSpan.Parse(textBoxTime.Text);
+                DateTime combinedDateTime = date.Add(time);
                 string filmName = textBoxFilmName.Text;
                 Halls hallNumber = (Halls)Enum.Parse(typeof(Halls), textBoxHall.Text);
 
 
-                bool isAdded = admin.AddSession(date, time, hallNumber, filmName, sessions);
+                bool isAdded = admin.AddSession(combinedDateTime, time, hallNumber, filmName, sessions);
                 if (isAdded)
                 {
                     sessions.OnSessionsUpdated(EventArgs.Empty);
@@ -51,12 +52,12 @@ namespace MainForm
                     MessageBox.Show("Session wasn't added!");
                 }
             }
-            catch(ArgumentException ex)
+            catch (ArgumentException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
         }
@@ -124,14 +125,14 @@ namespace MainForm
             {
                 MessageBox.Show(ex.Message);
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            
+
             }
         }
 
-        private void ClearTextBoxes(TextBox textBox1,TextBox textBox2,TextBox textBox3,TextBox textBox4)
+        private void ClearTextBoxes(TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4)
         {
             textBox1.Clear();
             textBox2.Clear();
@@ -143,6 +144,20 @@ namespace MainForm
         {
             JsonManager jsonManager = new JsonManager();
             jsonManager.WriteToFile(sessions, @"C:\Visual Studio Projects\OOP_Project_2024_Balychev\json", "sessions.json");
+        }
+
+
+        private void buttonShowSessionList_Click(object sender, EventArgs e)
+        {
+            SessionListBox.Visible = true;
+
+            DateTime selectedDate = dateTimePickerDate.Value;
+
+            bool isViewed = admin.ViewSessions(selectedDate, sessions, SessionListBox);
+            if (!isViewed)
+            {
+                MessageBox.Show("Cannot view sessions for the selected date.");
+            }
         }
     }
 

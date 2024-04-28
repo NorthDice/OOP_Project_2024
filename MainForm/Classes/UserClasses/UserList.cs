@@ -28,24 +28,6 @@ namespace MainForm.Classes.UserClasses
 
         public bool IsReadOnly => false;
 
-        //public void AddUser(User user)
-        //{
-        //    user = user ?? throw new ArgumentNullException(nameof(user), "User cannot be null");
-
-        //    if (users.Contains(user))
-        //    {
-        //        throw new ArgumentException("Duplicate user!");
-        //    }
-
-        //    users.Add(user);
-        //}
-
-        //public bool RemoveUser(User user)
-        //{
-        //    user = user ?? throw new ArgumentNullException(nameof(user), "User cannot be null");
-
-        //    return users.Remove(user);
-        //}
 
         public bool Contains(string name)
         {

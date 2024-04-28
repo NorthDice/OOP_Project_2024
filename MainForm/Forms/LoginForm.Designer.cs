@@ -37,22 +37,26 @@
             // 
             // textBoxPassword
             // 
-            textBoxPassword.Location = new Point(327, 128);
+            textBoxPassword.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxPassword.BorderStyle = BorderStyle.None;
+            textBoxPassword.Location = new Point(142, 99);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(247, 27);
+            textBoxPassword.Size = new Size(247, 20);
             textBoxPassword.TabIndex = 16;
             // 
             // textBoxLogin
             // 
-            textBoxLogin.Location = new Point(327, 66);
+            textBoxLogin.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxLogin.BorderStyle = BorderStyle.None;
+            textBoxLogin.Location = new Point(142, 37);
             textBoxLogin.Name = "textBoxLogin";
-            textBoxLogin.Size = new Size(247, 27);
+            textBoxLogin.Size = new Size(247, 20);
             textBoxLogin.TabIndex = 15;
             // 
             // labelPassword
             // 
             labelPassword.AutoSize = true;
-            labelPassword.Location = new Point(226, 135);
+            labelPassword.Location = new Point(41, 106);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(70, 20);
             labelPassword.TabIndex = 11;
@@ -61,7 +65,7 @@
             // labelLogin
             // 
             labelLogin.AutoSize = true;
-            labelLogin.Location = new Point(226, 73);
+            labelLogin.Location = new Point(41, 44);
             labelLogin.Name = "labelLogin";
             labelLogin.Size = new Size(46, 20);
             labelLogin.TabIndex = 10;
@@ -69,19 +73,23 @@
             // 
             // buttonLogin
             // 
-            buttonLogin.Location = new Point(345, 220);
+            buttonLogin.BackColor = SystemColors.ControlLight;
+            buttonLogin.FlatAppearance.BorderSize = 0;
+            buttonLogin.FlatStyle = FlatStyle.Flat;
+            buttonLogin.Location = new Point(160, 191);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(147, 40);
             buttonLogin.TabIndex = 9;
             buttonLogin.Text = "Login";
-            buttonLogin.UseVisualStyleBackColor = true;
+            buttonLogin.UseVisualStyleBackColor = false;
             buttonLogin.Click += buttonLogin_Click;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(176, 164, 165);
+            ClientSize = new Size(458, 256);
             Controls.Add(textBoxPassword);
             Controls.Add(textBoxLogin);
             Controls.Add(labelPassword);

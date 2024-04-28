@@ -60,9 +60,6 @@ namespace MainForm.Classes.Cinema
             }
         }
 
-
-     
-
         public TimeSpan Time
         {
             get { return _time; }

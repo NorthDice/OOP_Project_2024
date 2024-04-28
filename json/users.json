@@ -1,23 +1,30 @@
 [
   {
-    "UserRole": 1,
     "Login": "Vanya",
     "Password": "Vanilla",
     "Name": "Ivan",
-    "Surname": "Martyniuk"
+    "Surname": "Martyniuk",
+    "UserRole": 1
   },
   {
-    "UserRole": 1,
     "Login": "Kiril",
     "Password": "Kirill",
     "Name": "Kiril",
-    "Surname": "Balychev"
+    "Surname": "Balychev",
+    "UserRole": 1
   },
   {
-    "UserRole": 1,
     "Login": "Bodya",
     "Password": "Bodyan",
     "Name": "Bogdan",
-    "Surname": "Kotlyarov"
+    "Surname": "Kotlyarov",
+    "UserRole": 1
+  },
+  {
+    "Login": "Kirill",
+    "Password": "Kirilyan",
+    "Name": "Kiril",
+    "Surname": "Balychev",
+    "UserRole": 1
   }
 ]

@@ -44,32 +44,41 @@
             // 
             // buttonView
             // 
+            buttonView.BackColor = SystemColors.ControlLight;
+            buttonView.FlatAppearance.BorderSize = 0;
+            buttonView.FlatStyle = FlatStyle.Flat;
             buttonView.Location = new Point(12, 117);
             buttonView.Name = "buttonView";
             buttonView.Size = new Size(147, 57);
             buttonView.TabIndex = 1;
             buttonView.Text = "View Session";
-            buttonView.UseVisualStyleBackColor = true;
+            buttonView.UseVisualStyleBackColor = false;
             buttonView.Click += buttonView_Click;
             // 
             // buttonSignUp
             // 
+            buttonSignUp.BackColor = SystemColors.ControlLight;
+            buttonSignUp.FlatAppearance.BorderSize = 0;
+            buttonSignUp.FlatStyle = FlatStyle.Flat;
             buttonSignUp.Location = new Point(12, 190);
             buttonSignUp.Name = "buttonSignUp";
             buttonSignUp.Size = new Size(147, 56);
             buttonSignUp.TabIndex = 2;
             buttonSignUp.Text = "Login";
-            buttonSignUp.UseVisualStyleBackColor = true;
+            buttonSignUp.UseVisualStyleBackColor = false;
             buttonSignUp.Click += buttonSignUp_Click;
             // 
             // buttonRegistration
             // 
+            buttonRegistration.BackColor = SystemColors.ControlLight;
+            buttonRegistration.FlatAppearance.BorderSize = 0;
+            buttonRegistration.FlatStyle = FlatStyle.Flat;
             buttonRegistration.Location = new Point(12, 269);
             buttonRegistration.Name = "buttonRegistration";
             buttonRegistration.Size = new Size(147, 51);
             buttonRegistration.TabIndex = 3;
             buttonRegistration.Text = "Registration";
-            buttonRegistration.UseVisualStyleBackColor = true;
+            buttonRegistration.UseVisualStyleBackColor = false;
             buttonRegistration.Click += buttonRegistration_Click;
             // 
             // SessionlistBox
@@ -84,6 +93,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(176, 164, 165);
             ClientSize = new Size(800, 450);
             Controls.Add(SessionlistBox);
             Controls.Add(buttonRegistration);

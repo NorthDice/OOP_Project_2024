@@ -41,63 +41,80 @@
             dateTimePickerDate = new DateTimePicker();
             labelNewTime = new Label();
             textBoxNewTime = new TextBox();
+            SessionListBox = new ListBox();
+            buttonShowSessionList = new Button();
             SuspendLayout();
             // 
             // buttonAddSession
             // 
-            buttonAddSession.Location = new Point(42, 61);
+            buttonAddSession.BackColor = SystemColors.ControlLight;
+            buttonAddSession.FlatAppearance.BorderSize = 0;
+            buttonAddSession.FlatStyle = FlatStyle.Flat;
+            buttonAddSession.Location = new Point(42, 25);
             buttonAddSession.Name = "buttonAddSession";
-            buttonAddSession.Size = new Size(138, 56);
+            buttonAddSession.Size = new Size(169, 40);
             buttonAddSession.TabIndex = 0;
             buttonAddSession.Text = "AddSession";
-            buttonAddSession.UseVisualStyleBackColor = true;
+            buttonAddSession.UseVisualStyleBackColor = false;
             buttonAddSession.Click += buttonAddSession_Click;
             // 
             // buttonDeleteSession
             // 
-            buttonDeleteSession.Location = new Point(42, 151);
+            buttonDeleteSession.BackColor = SystemColors.ControlLight;
+            buttonDeleteSession.FlatAppearance.BorderSize = 0;
+            buttonDeleteSession.FlatStyle = FlatStyle.Flat;
+            buttonDeleteSession.Location = new Point(42, 91);
             buttonDeleteSession.Name = "buttonDeleteSession";
-            buttonDeleteSession.Size = new Size(138, 57);
+            buttonDeleteSession.Size = new Size(169, 42);
             buttonDeleteSession.TabIndex = 1;
             buttonDeleteSession.Text = "DeleteSession";
-            buttonDeleteSession.UseVisualStyleBackColor = true;
+            buttonDeleteSession.UseVisualStyleBackColor = false;
             buttonDeleteSession.Click += buttonDeleteSession_Click;
             // 
             // buttonEditSession
             // 
-            buttonEditSession.Location = new Point(42, 247);
+            buttonEditSession.BackColor = SystemColors.ControlLight;
+            buttonEditSession.FlatAppearance.BorderSize = 0;
+            buttonEditSession.FlatStyle = FlatStyle.Flat;
+            buttonEditSession.Location = new Point(42, 157);
             buttonEditSession.Name = "buttonEditSession";
-            buttonEditSession.Size = new Size(138, 56);
+            buttonEditSession.Size = new Size(169, 46);
             buttonEditSession.TabIndex = 2;
             buttonEditSession.Text = "EditSession";
-            buttonEditSession.UseVisualStyleBackColor = true;
+            buttonEditSession.UseVisualStyleBackColor = false;
             buttonEditSession.Click += buttonEditSession_Click;
             // 
             // textBoxFilmName
             // 
-            textBoxFilmName.Location = new Point(235, 207);
+            textBoxFilmName.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxFilmName.BorderStyle = BorderStyle.None;
+            textBoxFilmName.Location = new Point(235, 129);
             textBoxFilmName.Name = "textBoxFilmName";
-            textBoxFilmName.Size = new Size(189, 27);
+            textBoxFilmName.Size = new Size(189, 20);
             textBoxFilmName.TabIndex = 5;
             // 
             // textBoxHall
             // 
-            textBoxHall.Location = new Point(508, 205);
+            textBoxHall.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxHall.BorderStyle = BorderStyle.None;
+            textBoxHall.Location = new Point(508, 127);
             textBoxHall.Name = "textBoxHall";
-            textBoxHall.Size = new Size(183, 27);
+            textBoxHall.Size = new Size(183, 20);
             textBoxHall.TabIndex = 6;
             // 
             // textBoxTime
             // 
-            textBoxTime.Location = new Point(508, 97);
+            textBoxTime.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxTime.BorderStyle = BorderStyle.None;
+            textBoxTime.Location = new Point(508, 54);
             textBoxTime.Name = "textBoxTime";
-            textBoxTime.Size = new Size(183, 27);
+            textBoxTime.Size = new Size(183, 20);
             textBoxTime.TabIndex = 7;
             // 
             // labelDate
             // 
             labelDate.AutoSize = true;
-            labelDate.Location = new Point(298, 61);
+            labelDate.Location = new Point(298, 18);
             labelDate.Name = "labelDate";
             labelDate.Size = new Size(41, 20);
             labelDate.TabIndex = 8;
@@ -106,7 +123,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(576, 61);
+            label2.Location = new Point(576, 18);
             label2.Name = "label2";
             label2.Size = new Size(42, 20);
             label2.TabIndex = 9;
@@ -115,7 +132,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(298, 169);
+            label3.Location = new Point(298, 91);
             label3.Name = "label3";
             label3.Size = new Size(81, 20);
             label3.TabIndex = 10;
@@ -124,7 +141,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(576, 169);
+            label4.Location = new Point(576, 91);
             label4.Name = "label4";
             label4.Size = new Size(36, 20);
             label4.TabIndex = 11;
@@ -132,7 +149,12 @@
             // 
             // dateTimePickerDate
             // 
-            dateTimePickerDate.Location = new Point(235, 97);
+            dateTimePickerDate.CalendarForeColor = Color.FromArgb(107, 94, 94);
+            dateTimePickerDate.CalendarMonthBackground = Color.FromArgb(107, 94, 94);
+            dateTimePickerDate.CalendarTitleBackColor = Color.FromArgb(107, 94, 94);
+            dateTimePickerDate.CalendarTitleForeColor = Color.FromArgb(107, 94, 94);
+            dateTimePickerDate.CalendarTrailingForeColor = Color.FromArgb(107, 94, 94);
+            dateTimePickerDate.Location = new Point(235, 54);
             dateTimePickerDate.Name = "dateTimePickerDate";
             dateTimePickerDate.Size = new Size(189, 27);
             dateTimePickerDate.TabIndex = 12;
@@ -140,7 +162,7 @@
             // labelNewTime
             // 
             labelNewTime.AutoSize = true;
-            labelNewTime.Location = new Point(298, 265);
+            labelNewTime.Location = new Point(423, 183);
             labelNewTime.Name = "labelNewTime";
             labelNewTime.Size = new Size(76, 20);
             labelNewTime.TabIndex = 13;
@@ -148,17 +170,43 @@
             // 
             // textBoxNewTime
             // 
-            textBoxNewTime.Location = new Point(235, 303);
+            textBoxNewTime.BackColor = Color.FromArgb(107, 94, 94);
+            textBoxNewTime.BorderStyle = BorderStyle.None;
+            textBoxNewTime.Location = new Point(360, 215);
             textBoxNewTime.Name = "textBoxNewTime";
-            textBoxNewTime.Size = new Size(189, 27);
+            textBoxNewTime.Size = new Size(189, 20);
             textBoxNewTime.TabIndex = 14;
+            // 
+            // SessionListBox
+            // 
+            SessionListBox.FormattingEnabled = true;
+            SessionListBox.Location = new Point(158, 284);
+            SessionListBox.Name = "SessionListBox";
+            SessionListBox.Size = new Size(571, 104);
+            SessionListBox.TabIndex = 15;
+            SessionListBox.Visible = false;
+            // 
+            // buttonShowSessionList
+            // 
+            buttonShowSessionList.BackColor = SystemColors.ControlLight;
+            buttonShowSessionList.FlatAppearance.BorderSize = 0;
+            buttonShowSessionList.FlatStyle = FlatStyle.Flat;
+            buttonShowSessionList.Location = new Point(42, 215);
+            buttonShowSessionList.Name = "buttonShowSessionList";
+            buttonShowSessionList.Size = new Size(169, 50);
+            buttonShowSessionList.TabIndex = 18;
+            buttonShowSessionList.Text = "Show sesions on date";
+            buttonShowSessionList.UseVisualStyleBackColor = false;
+            buttonShowSessionList.Click += buttonShowSessionList_Click;
             // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(176, 164, 165);
+            ClientSize = new Size(768, 421);
+            Controls.Add(buttonShowSessionList);
+            Controls.Add(SessionListBox);
             Controls.Add(textBoxNewTime);
             Controls.Add(labelNewTime);
             Controls.Add(dateTimePickerDate);
@@ -193,5 +241,7 @@
         private DateTimePicker dateTimePickerDate;
         private Label labelNewTime;
         private TextBox textBoxNewTime;
+        private ListBox SessionListBox;
+        private Button buttonShowSessionList;
     }
 }

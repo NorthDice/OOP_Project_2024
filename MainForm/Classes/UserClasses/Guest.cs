@@ -120,7 +120,7 @@ namespace MainForm.Classes.UserClasses
                 }
                 else
                 {
-                    throw new ArgumentException("Login must contain at least 5 Latin characters.");
+                    throw new ArgumentException("Registration is not possible!The login and password must contain only latin letters and numbers! ");
                 }
             }
         }
@@ -136,7 +136,7 @@ namespace MainForm.Classes.UserClasses
                 }
                 else
                 {
-                    throw new ArgumentException("Password must contain at least 6 Latin characters!");
+                    throw new ArgumentException("Registration is not possible!The login and password must contain only latin letters and numbers! ");
                 }
             }
         }
