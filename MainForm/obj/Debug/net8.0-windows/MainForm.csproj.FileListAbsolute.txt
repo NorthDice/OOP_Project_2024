@@ -19,3 +19,6 @@ C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-wi
 C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.GuestForm.resources
 C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.RegistrationForm.resources
 C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.LoginForm.resources
+C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.csproj.AssemblyReference.cache
+C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Visual Studio Projects\OOP_Project_2024_Balychev\MainForm\obj\Debug\net8.0-windows\MainForm.csproj.Up2Date

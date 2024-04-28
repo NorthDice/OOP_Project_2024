@@ -1,6 +1,7 @@
 using MainForm.Classes.Cinema;
 using MainForm.Classes.UserClasses;
 
+
 namespace MainForm
 {
     internal static class Program
@@ -11,16 +12,31 @@ namespace MainForm
         [STAThread]
         static void Main()
         {
-            // Создаем экземпляр SessionList
-            SessionList sessions = new SessionList();
-            UserList users = new UserList();
-           Guest guest = new Guest();
-            // Запускаем приложение, передавая экземпляр SessionList в форму RegistredUserForm
+
+            //SessionList sessions = new SessionList();
+            SessionList sessions = JsonManager.ReadFromFile<SessionList>(@"C:\Visual Studio Projects\OOP_Project_2024_Balychev\json", "sessions.json");
+
+            //"C:\Visual Studio Projects\OOP_Project_2024_Balychev\json\sessions.json"
+            UserList users = JsonManager.ReadUserListFromFile(@"C:\Visual Studio Projects\OOP_Project_2024_Balychev\json", "users.json");
+            //JsonManager.ReadFromFile<UserList>("C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\json", "sessions.json");
+
+
+
+
+
+
+
+            Guest guest = new Guest();
+            
             ApplicationConfiguration.Initialize();
-            //RegistredUserForm registredUserForm = new RegistredUserForm(sessions);
-           LoginForm loginForm = new LoginForm(guest,users);
-            loginForm.Show();
-            Application.Run(new RegistrationForm(guest,users));
+            
+            AdminForm adminForm = new AdminForm(sessions,users);
+            RegistredUserForm registredUser = new RegistredUserForm(sessions);
+            GuestForm guestForm = new GuestForm(sessions,users);
+            LoginForm loginForm = new LoginForm(guest,users, sessions);
+           
+
+            Application.Run(guestForm);
           
         }
     }

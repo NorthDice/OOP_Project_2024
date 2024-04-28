@@ -33,10 +33,10 @@
             labelPassword = new Label();
             labelName = new Label();
             labelSurname = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            textBoxLogin = new TextBox();
+            textBoxPassword = new TextBox();
+            textBoxName = new TextBox();
+            textBoxSurname = new TextBox();
             SuspendLayout();
             // 
             // buttonRegistration
@@ -47,7 +47,7 @@
             buttonRegistration.TabIndex = 0;
             buttonRegistration.Text = "Registration";
             buttonRegistration.UseVisualStyleBackColor = true;
-            buttonRegistration.Click += button1_Click;
+            buttonRegistration.Click += buttonRegistration_Click;
             // 
             // labelLogin
             // 
@@ -85,43 +85,43 @@
             labelSurname.TabIndex = 4;
             labelSurname.Text = "Surname";
             // 
-            // textBox1
+            // textBoxLogin
             // 
-            textBox1.Location = new Point(279, 281);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(247, 27);
-            textBox1.TabIndex = 5;
+            textBoxLogin.Location = new Point(279, 96);
+            textBoxLogin.Name = "textBoxLogin";
+            textBoxLogin.Size = new Size(247, 27);
+            textBoxLogin.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxPassword
             // 
-            textBox2.Location = new Point(279, 92);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(247, 27);
-            textBox2.TabIndex = 6;
+            textBoxPassword.Location = new Point(279, 161);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.Size = new Size(247, 27);
+            textBoxPassword.TabIndex = 6;
             // 
-            // textBox3
+            // textBoxName
             // 
-            textBox3.Location = new Point(279, 154);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(247, 27);
-            textBox3.TabIndex = 7;
+            textBoxName.Location = new Point(279, 223);
+            textBoxName.Name = "textBoxName";
+            textBoxName.Size = new Size(247, 27);
+            textBoxName.TabIndex = 7;
             // 
-            // textBox4
+            // textBoxSurname
             // 
-            textBox4.Location = new Point(279, 216);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(247, 27);
-            textBox4.TabIndex = 8;
+            textBoxSurname.Location = new Point(279, 288);
+            textBoxSurname.Name = "textBoxSurname";
+            textBoxSurname.Size = new Size(247, 27);
+            textBoxSurname.TabIndex = 8;
             // 
             // RegistrationForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxSurname);
+            Controls.Add(textBoxName);
+            Controls.Add(textBoxPassword);
+            Controls.Add(textBoxLogin);
             Controls.Add(labelSurname);
             Controls.Add(labelName);
             Controls.Add(labelPassword);
@@ -140,9 +140,9 @@
         private Label labelPassword;
         private Label labelName;
         private Label labelSurname;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textBoxLogin;
+        private TextBox textBoxPassword;
+        private TextBox textBoxName;
+        private TextBox textBoxSurname;
     }
 }

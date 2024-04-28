@@ -1,5 +1,6 @@
 using MainForm.Classes.Cinema;
 using MainForm.Enums;
+using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
@@ -115,8 +116,9 @@ namespace Tests
             Halls hallNumber = Halls.FirstHall;
             string filmName = "Test Film";
             Session session = new Session(futureDate, filmName, hallNumber, futureTime); 
+            ListBox listBox = new ListBox();
 
-            session.ViewSessionInformation();
+            session.ViewSessionInformation(listBox);
 
         }
     }

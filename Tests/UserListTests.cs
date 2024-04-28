@@ -20,7 +20,7 @@ namespace Tests
             var user = new RegistredUser("testuser", "testpassword", "John", "Doe",Role.RegistredUser);
 
             // Act
-            userList.AddUser(user);
+            userList.Add(user);
 
             // Assert
             Assert.AreEqual(1, userList.Count);
@@ -33,10 +33,10 @@ namespace Tests
             // Arrange
             var userList = new UserList();
             var user = new RegistredUser("testuser", "testpassword", "John", "Doe", Role.RegistredUser);
-            userList.AddUser(user);
+            userList.Add(user);
 
             // Act & Assert
-            Assert.ThrowsException<ArgumentException>(() => userList.AddUser(user));
+            Assert.ThrowsException<ArgumentException>(() => userList.Add(user));
         }
 
         [TestMethod]
@@ -45,10 +45,10 @@ namespace Tests
             // Arrange
             var userList = new UserList();
             var user = new RegistredUser("testuser", "testpassword", "John", "Doe", Role.RegistredUser);
-            userList.AddUser(user);
+            userList.Add(user);
 
             // Act
-            userList.RemoveUser(user);
+            userList.Remove(user);
 
             // Assert
             Assert.AreEqual(0, userList.Count);
@@ -63,7 +63,7 @@ namespace Tests
             var user = new RegistredUser("testuser", "testpassword", "John", "Doe", Role.RegistredUser);
 
             // Act
-            bool result = userList.RemoveUser(user);
+            bool result = userList.Remove(user);
 
             // Assert
             Assert.IsFalse(result);
@@ -87,7 +87,7 @@ namespace Tests
             // Arrange
             var userList = new UserList();
             var user = new RegistredUser("testuser", "testpassword", "John", "Doe", Role.RegistredUser);
-            userList.AddUser(user);
+            userList.Add(user);
 
             // Act & Assert
             Assert.IsFalse(userList.IsEmpty());

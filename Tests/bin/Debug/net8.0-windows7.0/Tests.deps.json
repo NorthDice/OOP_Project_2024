@@ -349,6 +349,9 @@
       },
       "System.Reflection.Metadata/1.6.0": {},
       "MainForm/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
         "runtime": {
           "MainForm.dll": {}
         }

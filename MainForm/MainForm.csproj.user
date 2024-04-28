@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="AdminForm.cs">
+    <Compile Update="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GuestForm.cs">
+    <Compile Update="Forms\GuestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LoginForm.cs">
+    <Compile Update="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RegistrationForm.cs">
+    <Compile Update="Forms\RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RegistredUserForm.cs">
+    <Compile Update="Forms\RegistredUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

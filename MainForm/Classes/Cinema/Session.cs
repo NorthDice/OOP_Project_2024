@@ -16,6 +16,7 @@ namespace MainForm.Classes.Cinema
         private TimeSpan _time;
         public static int _count = 0;
 
+        public Session() {      }
         public Session(DateTime date, string filmName, Halls hallNumber, TimeSpan time)
         {
             Date = date;

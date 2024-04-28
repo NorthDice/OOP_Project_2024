@@ -18,7 +18,8 @@ namespace MainForm.Classes.UserClasses
         private string _name;
         private string _surname;
         private Role _userRole;
-
+        
+        public RegistredUser() {     }
         public RegistredUser(string login,string password,string name,string surname,Role userRole) 
         { 
             _login= login;
@@ -194,6 +195,11 @@ namespace MainForm.Classes.UserClasses
                 }
                 _userRole = value;
             }
+        }
+        public int UserRoleValue 
+        {
+            get { return (int)UserRole; }
+            set { UserRole = (Role)value; }
         }
 
         public override string Login

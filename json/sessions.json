@@ -1,0 +1,26 @@
+[
+  {
+    "Date": "2024-04-28T00:00:00",
+    "Time": "13:00:00",
+    "HallNumber": 2,
+    "FilmName": "Film"
+  },
+  {
+    "Date": "2024-04-28T00:00:00",
+    "Time": "17:00:00",
+    "HallNumber": 2,
+    "FilmName": "Piko"
+  },
+  {
+    "Date": "2024-04-28T00:00:00",
+    "Time": "11:00:00",
+    "HallNumber": 3,
+    "FilmName": "Boku"
+  },
+  {
+    "Date": "2024-04-28T00:00:00",
+    "Time": "12:00:00",
+    "HallNumber": 6,
+    "FilmName": "No"
+  }
+]

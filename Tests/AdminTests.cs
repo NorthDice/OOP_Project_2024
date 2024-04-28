@@ -82,7 +82,7 @@ namespace Tests
             // Arrange
             SessionList sessionList = new SessionList();
             Admin admin = new Admin("admin", "password", "John", "Doe", Role.Admin);
-            sessionList.AddSession(new Session(DateTime.Now.AddDays(1), "Test Film", Halls.FirstHall, TimeSpan.FromHours(18)));
+            sessionList.Add(new Session(DateTime.Now.AddDays(1), "Test Film", Halls.FirstHall, TimeSpan.FromHours(18)));
 
             // Act
             bool edited = admin.EditSession(DateTime.Now.AddDays(-1), TimeSpan.FromHours(18), TimeSpan.FromHours(19), sessionList);
@@ -97,7 +97,7 @@ namespace Tests
             // Arrange
             SessionList sessionList = new SessionList();
             Admin admin = new Admin("admin", "password", "John", "Doe", Role.Admin);
-            sessionList.AddSession(new Session(DateTime.Now.AddDays(1), "Test Film", Halls.FirstHall, TimeSpan.FromHours(18)));
+            sessionList.Add(new Session(DateTime.Now.AddDays(1), "Test Film", Halls.FirstHall, TimeSpan.FromHours(18)));
 
             // Act
             bool edited = admin.EditSession(DateTime.Now.AddDays(1), TimeSpan.FromHours(17), TimeSpan.FromHours(19), sessionList);
@@ -124,7 +124,7 @@ namespace Tests
             var originalTime = TimeSpan.FromHours(18);
             var newTime = TimeSpan.FromHours(19);
             var tomorrow = DateTime.Now.AddDays(1);
-            sessionList.AddSession(new Session(tomorrow, "Test Film", Halls.FirstHall, originalTime));
+            sessionList.Add(new Session(tomorrow, "Test Film", Halls.FirstHall, originalTime));
 
             // Act
             bool edited = admin.EditSession(tomorrow, originalTime, newTime, sessionList);
@@ -143,7 +143,7 @@ namespace Tests
             var time = TimeSpan.FromHours(18);
             var filmName = "Test Film";
             var hallNumber = Halls.FirstHall;
-            sessionList.AddSession(new Session(date, filmName, hallNumber, time));
+            sessionList.Add(new Session(date, filmName, hallNumber, time));
 
             // Act
             bool deleted = admin.DeleteSession(date, time, hallNumber, filmName, sessionList);

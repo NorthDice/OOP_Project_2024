@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zOazRyv/xVjccBW0bmmYv1SbCfoUxf3Wb7inF1rTt5o70xLOUSRk6dx4r/cWZ5+jAKeasIXthhGyY1b2LOxcNA==",
+  "dgSpecHash": "S3GSfV1O9Tzutn6QWHwCbOcJeRXhUKJuIWY8JhlRDgE+cXsdk9rDxn7gtpA15nVPi4MQfeDuDc7kGhCj0nIMuQ==",
   "success": true,
   "projectFilePath": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\MainForm.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\usuario\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

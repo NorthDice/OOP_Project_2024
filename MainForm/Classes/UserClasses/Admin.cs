@@ -16,7 +16,7 @@ namespace MainForm.Classes.UserClasses
         private string _name;
         private string _surname;
         private Role _userRole;
-
+        public Admin() { }
         public Admin(string login, string password, string name, string surname, Role userRole)
         {
             _login = login;
@@ -43,7 +43,7 @@ namespace MainForm.Classes.UserClasses
                 return false;
             }
 
-            sessions.AddSession(new Session(date, filmName, hallNumber, time));
+            sessions.Add(new Session(date, filmName, hallNumber, time));
             return true;
            
         }
@@ -100,7 +100,7 @@ namespace MainForm.Classes.UserClasses
 
             Session sessionToDelete = new Session(date, filmName, hallNumber, time);
 
-            return sessions.RemoveSession(sessionToDelete);
+            return sessions.Remove(sessionToDelete);
         }
 
         public override bool SignUp(string login, string password, UserList users)

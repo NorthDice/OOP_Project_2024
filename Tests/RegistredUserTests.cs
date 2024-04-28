@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Tests
 {
@@ -23,7 +24,7 @@ namespace Tests
             Halls hallNumber = Halls.FirstHall;
             string filmName = "Test Film";
             SessionList sessions = new SessionList();
-            sessions.AddSession(new Session(futureDate, filmName, hallNumber, futureTime)); // добавляем будущий сеанс
+            sessions.Add(new Session(futureDate, filmName, hallNumber, futureTime)); // добавляем будущий сеанс
 
             RegistredUser user = new RegistredUser("testuser", "testpassword", "Test", "User", Role.RegistredUser);
 
@@ -43,7 +44,7 @@ namespace Tests
             Halls hallNumber = Halls.FirstHall;
             string filmName = "Test Film";
             SessionList sessions = new SessionList();
-            sessions.AddSession(new Session(DateTime.Now, filmName, hallNumber, DateTime.Now.TimeOfDay)); // Добавляем текущий сеанс
+            sessions.Add(new Session(DateTime.Now, filmName, hallNumber, DateTime.Now.TimeOfDay)); // Добавляем текущий сеанс
 
             RegistredUser user = new RegistredUser("testuser", "testpassword", "Test", "User", Role.RegistredUser);
 
@@ -59,7 +60,7 @@ namespace Tests
             Halls hallNumber = Halls.FirstHall;
             string filmName = "Test Film";
             SessionList sessions = new SessionList();
-            sessions.AddSession(new Session(futureDate, filmName, hallNumber, futureTime)); // добавляем будущий сеанс
+            sessions.Add(new Session(futureDate, filmName, hallNumber, futureTime)); // добавляем будущий сеанс
 
             RegistredUser user = new RegistredUser("testuser", "testpassword", "Test", "User", Role.RegistredUser);
 
@@ -79,7 +80,7 @@ namespace Tests
             Halls hallNumber = Halls.FirstHall;
             string filmName = "Test Film";
             SessionList sessions = new SessionList();
-            sessions.AddSession(new Session(DateTime.Now, filmName, hallNumber, DateTime.Now.TimeOfDay)); // Добавляем текущий сеанс
+            sessions.Add(new Session(DateTime.Now, filmName, hallNumber, DateTime.Now.TimeOfDay)); // Добавляем текущий сеанс
 
             RegistredUser user = new RegistredUser("testuser", "testpassword", "Test", "User", Role.RegistredUser);
 
@@ -95,12 +96,12 @@ namespace Tests
             // Arrange
             DateTime futureDate = DateTime.Now.AddDays(1); // будущая дата
             SessionList sessions = new SessionList();
-            sessions.AddSession(new Session(futureDate, "Test Film", Halls.FirstHall, DateTime.Now.TimeOfDay)); // добавляем будущий сеанс
+            sessions.Add(new Session(futureDate, "Test Film", Halls.FirstHall, DateTime.Now.TimeOfDay)); // добавляем будущий сеанс
 
             RegistredUser user = new RegistredUser("testuser", "testpassword", "Test", "User", Role.RegistredUser);
-
+            ListBox listBox = new ListBox();
             // Act
-            bool result = user.ViewSessions(futureDate, sessions);
+            bool result = user.ViewSessions(futureDate, sessions,listBox);
 
             // Assert
             Assert.IsTrue(result, "Viewing sessions should return true for valid date");
@@ -112,12 +113,12 @@ namespace Tests
             // Arrange
             DateTime pastDate = DateTime.Now.AddDays(-1); // Прошлая дата
             SessionList sessions = new SessionList();
-            sessions.AddSession(new Session(DateTime.Now, "Test Film", Halls.FirstHall, DateTime.Now.TimeOfDay)); // Добавляем текущий сеанс
+            sessions.Add(new Session(DateTime.Now, "Test Film", Halls.FirstHall, DateTime.Now.TimeOfDay)); // Добавляем текущий сеанс
 
             RegistredUser user = new RegistredUser("testuser", "testpassword", "Test", "User", Role.RegistredUser);
-
+            ListBox listBox = new ListBox();
             // Act
-            bool result = user.ViewSessions(pastDate, sessions);
+            bool result = user.ViewSessions(pastDate, sessions, listBox);
 
             // Assert
             Assert.IsFalse(result, "Viewing sessions should return false for invalid date");
@@ -131,9 +132,9 @@ namespace Tests
             SessionList sessions = new SessionList(); // пустой список сеансов
 
             RegistredUser user = new RegistredUser("testuser", "testpassword", "Test", "User", Role.RegistredUser);
-
+            ListBox listBox = new ListBox();
             // Act & Assert
-            Assert.ThrowsException<ArgumentNullException>(() => user.ViewSessions(futureDate, sessions));
+            Assert.ThrowsException<ArgumentNullException>(() => user.ViewSessions(futureDate, sessions, listBox));
         }
         [TestMethod]
         public void SignUp_ValidCredentials_ShouldReturnTrue()
@@ -148,7 +149,7 @@ namespace Tests
 
             // Act
 
-            users.AddUser(user);
+            users.Add(user);
             bool result = guest.SignUp(username, password, users);
 
             // Assert
@@ -165,7 +166,7 @@ namespace Tests
             string username = "testuser";
             string password = "testpassword";
             UserList users = new UserList();
-            users.AddUser(new RegistredUser(username, password, "Test", "User", Role.RegistredUser)); // Добавляем пользователя с такими же учетными данными
+            users.Add(new RegistredUser(username, password, "Test", "User", Role.RegistredUser)); // Добавляем пользователя с такими же учетными данными
             Guest guest = new Guest(); // Создаем экземпляр класса Guest
 
             // Act

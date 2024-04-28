@@ -19,7 +19,7 @@ namespace Tests
             Session session = new Session(DateTime.Now, "Test Film", Halls.FirstHall, TimeSpan.FromHours(18));
 
             // Act
-            sessionList.AddSession(session);
+            sessionList.Add(session);
 
             // Assert
             Assert.AreEqual(1, sessionList.Count);
@@ -34,7 +34,7 @@ namespace Tests
             SessionList sessionList = new SessionList();
 
             // Act
-            sessionList.AddSession(null);
+            sessionList.Add(null);
 
            
         }
@@ -46,10 +46,10 @@ namespace Tests
             SessionList sessionList = new SessionList();
             sessionList.Clear();
             Session session = new Session(DateTime.Now, "Test Film", Halls.FirstHall, TimeSpan.FromHours(18));
-            sessionList.AddSession(session);
+            sessionList.Add(session);
 
             // Act
-            bool removed = sessionList.RemoveSession(session);
+            bool removed = sessionList.Remove(session);
 
             // Assert
             Assert.IsTrue(removed);
@@ -65,7 +65,7 @@ namespace Tests
             Session session = new Session(DateTime.Now, "Test Film", Halls.FirstHall, TimeSpan.FromHours(18));
 
             // Act
-            sessionList.RemoveSession(session);
+            sessionList.Remove(session);
 
            
         }
@@ -76,8 +76,8 @@ namespace Tests
             SessionList sessionList = new SessionList();
             Session session1 = new Session(DateTime.Now, "Test Film 1", Halls.FirstHall, TimeSpan.FromHours(18));
             Session session2 = new Session(DateTime.Now, "Test Film 2", Halls.SecondHall, TimeSpan.FromHours(20));
-            sessionList.AddSession(session1);
-            sessionList.AddSession(session2);
+            sessionList.Add(session1);
+            sessionList.Add(session2);
 
             // Act
             sessionList.Clear();
@@ -106,7 +106,7 @@ namespace Tests
             // Arrange
             SessionList sessionList = new SessionList();
             Session session = new Session(DateTime.Now, "Test Film", Halls.FirstHall, TimeSpan.FromHours(18));
-            sessionList.AddSession(session);
+            sessionList.Add(session);
 
             // Act
             bool isEmpty = sessionList.IsEmpty();
@@ -121,8 +121,8 @@ namespace Tests
             SessionList sessionList = new SessionList();
             Session session1 = new Session(DateTime.Now, "Test Film 1", Halls.FirstHall, TimeSpan.FromHours(18));
             Session session2 = new Session(DateTime.Now, "Test Film 2", Halls.SecondHall, TimeSpan.FromHours(20));
-            sessionList.AddSession(session1);
-            sessionList.AddSession(session2);
+            sessionList.Add(session1);
+            sessionList.Add(session2);
 
             // Act
             int count = sessionList.Count;

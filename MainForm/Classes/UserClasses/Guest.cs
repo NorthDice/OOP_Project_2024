@@ -103,7 +103,7 @@ namespace MainForm.Classes.UserClasses
                 throw new ArgumentException("Login must be at least 5 characters long!");
             }
 
-            users.AddUser(new RegistredUser(login, password, name, surname, Enums.Role.RegistredUser));
+            users.Add(new RegistredUser(login, password, name, surname, Enums.Role.RegistredUser));
             return true;
         }
 

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Tests
 {
@@ -19,10 +20,10 @@ namespace Tests
             var guest = new Guest();
             var sessionList = new SessionList();
             var currentDate = DateTime.Now;
-            sessionList.AddSession(new Session(currentDate, "Test Film", Halls.FirstHall, TimeSpan.FromHours(18)));
-
+            sessionList.Add(new Session(currentDate, "Test Film", Halls.FirstHall, TimeSpan.FromHours(18)));
+            ListBox listBox = new ListBox();
             // Act
-            var result = guest.ViewSessions(currentDate, sessionList);
+            var result = guest.ViewSessions(currentDate, sessionList,listBox);
 
             // Assert
             Assert.IsTrue(result);
@@ -35,9 +36,9 @@ namespace Tests
             var guest = new Guest();
             var sessionList = new SessionList();
             var currentDate = DateTime.Now;
-
+            ListBox listBox = new ListBox();
             // Act & Assert
-            Assert.ThrowsException<ArgumentNullException>(() => guest.ViewSessions(currentDate, sessionList));
+            Assert.ThrowsException<ArgumentNullException>(() => guest.ViewSessions(currentDate, sessionList, listBox));
         }
 
         [TestMethod]
@@ -47,10 +48,11 @@ namespace Tests
             var guest = new Guest();
             var sessionList = new SessionList();
             var pastDate = DateTime.Now.AddDays(-1); // Используем прошедшую дату
-            sessionList.AddSession(new Session(DateTime.Now, "Test Film", Halls.FirstHall, TimeSpan.FromHours(18)));
+            sessionList.Add(new Session(DateTime.Now, "Test Film", Halls.FirstHall, TimeSpan.FromHours(18)));
+            ListBox listBox = new ListBox();
 
             // Act
-            var result = guest.ViewSessions(pastDate, sessionList);
+            var result = guest.ViewSessions(pastDate, sessionList, listBox);
 
             // Assert
             Assert.IsFalse(result);

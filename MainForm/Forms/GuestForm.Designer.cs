@@ -60,6 +60,7 @@
             buttonSignUp.TabIndex = 2;
             buttonSignUp.Text = "Login";
             buttonSignUp.UseVisualStyleBackColor = true;
+            buttonSignUp.Click += buttonSignUp_Click;
             // 
             // buttonRegistration
             // 
@@ -69,6 +70,7 @@
             buttonRegistration.TabIndex = 3;
             buttonRegistration.Text = "Registration";
             buttonRegistration.UseVisualStyleBackColor = true;
+            buttonRegistration.Click += buttonRegistration_Click;
             // 
             // SessionlistBox
             // 

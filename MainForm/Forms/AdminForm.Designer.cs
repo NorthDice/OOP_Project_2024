@@ -31,7 +31,6 @@
             buttonAddSession = new Button();
             buttonDeleteSession = new Button();
             buttonEditSession = new Button();
-            button4 = new Button();
             textBoxFilmName = new TextBox();
             textBoxHall = new TextBox();
             textBoxTime = new TextBox();
@@ -40,46 +39,39 @@
             label3 = new Label();
             label4 = new Label();
             dateTimePickerDate = new DateTimePicker();
+            labelNewTime = new Label();
+            textBoxNewTime = new TextBox();
             SuspendLayout();
             // 
             // buttonAddSession
             // 
-            buttonAddSession.Location = new Point(42, 83);
+            buttonAddSession.Location = new Point(42, 61);
             buttonAddSession.Name = "buttonAddSession";
-            buttonAddSession.Size = new Size(116, 29);
+            buttonAddSession.Size = new Size(138, 56);
             buttonAddSession.TabIndex = 0;
             buttonAddSession.Text = "AddSession";
             buttonAddSession.UseVisualStyleBackColor = true;
-            buttonAddSession.Click += button1_Click;
+            buttonAddSession.Click += buttonAddSession_Click;
             // 
             // buttonDeleteSession
             // 
-            buttonDeleteSession.Location = new Point(42, 144);
+            buttonDeleteSession.Location = new Point(42, 151);
             buttonDeleteSession.Name = "buttonDeleteSession";
-            buttonDeleteSession.Size = new Size(116, 30);
+            buttonDeleteSession.Size = new Size(138, 57);
             buttonDeleteSession.TabIndex = 1;
             buttonDeleteSession.Text = "DeleteSession";
             buttonDeleteSession.UseVisualStyleBackColor = true;
-            buttonDeleteSession.Click += button2_Click;
+            buttonDeleteSession.Click += buttonDeleteSession_Click;
             // 
             // buttonEditSession
             // 
-            buttonEditSession.Location = new Point(42, 205);
+            buttonEditSession.Location = new Point(42, 247);
             buttonEditSession.Name = "buttonEditSession";
-            buttonEditSession.Size = new Size(116, 29);
+            buttonEditSession.Size = new Size(138, 56);
             buttonEditSession.TabIndex = 2;
             buttonEditSession.Text = "EditSession";
             buttonEditSession.UseVisualStyleBackColor = true;
-            buttonEditSession.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(42, 261);
-            button4.Name = "button4";
-            button4.Size = new Size(116, 29);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            buttonEditSession.Click += buttonEditSession_Click;
             // 
             // textBoxFilmName
             // 
@@ -145,11 +137,30 @@
             dateTimePickerDate.Size = new Size(189, 27);
             dateTimePickerDate.TabIndex = 12;
             // 
+            // labelNewTime
+            // 
+            labelNewTime.AutoSize = true;
+            labelNewTime.Location = new Point(298, 265);
+            labelNewTime.Name = "labelNewTime";
+            labelNewTime.Size = new Size(76, 20);
+            labelNewTime.TabIndex = 13;
+            labelNewTime.Text = "New Time";
+            // 
+            // textBoxNewTime
+            // 
+            textBoxNewTime.Location = new Point(235, 303);
+            textBoxNewTime.Name = "textBoxNewTime";
+            textBoxNewTime.Size = new Size(189, 27);
+            textBoxNewTime.TabIndex = 14;
+            // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBoxNewTime);
+            Controls.Add(labelNewTime);
             Controls.Add(dateTimePickerDate);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -158,7 +169,6 @@
             Controls.Add(textBoxTime);
             Controls.Add(textBoxHall);
             Controls.Add(textBoxFilmName);
-            Controls.Add(button4);
             Controls.Add(buttonEditSession);
             Controls.Add(buttonDeleteSession);
             Controls.Add(buttonAddSession);
@@ -173,7 +183,6 @@
         private Button buttonAddSession;
         private Button buttonDeleteSession;
         private Button buttonEditSession;
-        private Button button4;
         private TextBox textBoxFilmName;
         private TextBox textBoxHall;
         private TextBox textBoxTime;
@@ -182,5 +191,7 @@
         private Label label3;
         private Label label4;
         private DateTimePicker dateTimePickerDate;
+        private Label labelNewTime;
+        private TextBox textBoxNewTime;
     }
 }

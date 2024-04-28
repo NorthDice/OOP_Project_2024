@@ -30,21 +30,19 @@ namespace MainForm
             Session session2 = new Session(DateTime.Now.Date, "Film 2", Halls.SecondHall, new TimeSpan(13, 0, 0));
             Session session3 = new Session(DateTime.Now.Date, "Film 3", Halls.ThirdHall, new TimeSpan(16, 0, 0));
 
-            sessions.AddSession(session1);
-            sessions.AddSession(session2);
-            sessions.AddSession(session3);
+            sessions.Add(session1);
+            sessions.Add(session2);
+            sessions.Add(session3);
 
-            // Получаем выбранную дату из DateTimePicker
-            DateTime selectedDate = dateTimePickerForSession.Value;
-
-
-            // Вызываем метод ViewSessions для вывода сеансов на экран
             try
             {
-                bool success = user.ViewSessions(selectedDate, sessions, SessionlistBox);
 
-                // Если вывод сеансов прошел успешно, обновляем ListBox с информацией о сеансах
-                if (success)
+                DateTime selectedDate = dateTimePickerForSession.Value;
+
+           
+                bool isViewed = user.ViewSessions(selectedDate, sessions, SessionlistBox);
+
+                if (isViewed)
                 {
                     MessageBox.Show("Sessions viewed successfully.");
                 }
@@ -74,15 +72,17 @@ namespace MainForm
                 string selectedFilm = textBoxFilmName.Text;
 
            
-                bool success = user.BuyTicket(selectedDate, selectedTime, selectedHall, selectedFilm, sessions);
+                bool isBought = user.BuyTicket(selectedDate, selectedTime, selectedHall, selectedFilm, sessions);
 
-                if (success)
+                if (isBought)
                 {
                     MessageBox.Show("Ticket purchased successfully!");
+                    ClearTextBoxes(textBoxTime, textBoxHall, textBoxFilmName);
                 }
                 else
                 {
                     MessageBox.Show("Failed to purchase ticket. Please check the details and try again.");
+                    ClearTextBoxes(textBoxTime, textBoxHall, textBoxFilmName);
                 }
             }
             catch (ArgumentNullException ex)
@@ -112,11 +112,12 @@ namespace MainForm
                 Halls selectedHall = (Halls)Enum.Parse(typeof(Halls), textBoxHall.Text);
                 string selectedFilm = textBoxFilmName.Text;
 
-                bool success = user.ReturnTicket(selectedDate, selectedTime, selectedHall, selectedFilm, sessions);
+                bool isReturned = user.ReturnTicket(selectedDate, selectedTime, selectedHall, selectedFilm, sessions);
 
-                if (success)
+                if (isReturned)
                 {
                     MessageBox.Show("Ticket returned successfully!");
+                    ClearTextBoxes(textBoxTime, textBoxHall, textBoxFilmName);
                 }
                 else
                 {
@@ -135,6 +136,13 @@ namespace MainForm
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void ClearTextBoxes(TextBox textBox1, TextBox textBox2, TextBox textBox3)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
         }
     }
 }
