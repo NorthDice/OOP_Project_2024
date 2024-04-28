@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,9 @@ namespace MainForm.Classes.UserClasses
 
         public static void SetCurrentUser(User user)
         {
+            Debug.WriteLine(user.UserRole);
             _currentUser = user;
+            
         }
 
         public static User GetCurrentUser()

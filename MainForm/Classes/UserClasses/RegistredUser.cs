@@ -17,10 +17,10 @@ namespace MainForm.Classes.UserClasses
         private string _password;
         private string _name;
         private string _surname;
-        private Role _userRole;
+        private Role _userRole = (Role)1;
         
         public RegistredUser() {     }
-        public RegistredUser(string login,string password,string name,string surname,Role userRole) 
+        public RegistredUser(string login,string password,string name,string surname,Role userRole = Role.RegistredUser) 
         { 
             _login= login;
             Password = password;
@@ -184,24 +184,6 @@ namespace MainForm.Classes.UserClasses
             return false;
         }
 
-        public Role UserRole
-        {
-            get { return _userRole; }
-            set
-            {
-                if (!Enum.IsDefined(typeof(Role), value))
-                {
-                    throw new ArgumentException("Invalid user role!");
-                }
-                _userRole = value;
-            }
-        }
-        public int UserRoleValue 
-        {
-            get { return (int)UserRole; }
-            set { UserRole = (Role)value; }
-        }
-
         public override string Login
         {
             get { return _login; }
@@ -235,7 +217,7 @@ namespace MainForm.Classes.UserClasses
             }
         }
 
-        public string Name
+        public override string Name
         {
             get { return _name; }
             set
@@ -251,7 +233,7 @@ namespace MainForm.Classes.UserClasses
             }
         }
 
-        public string Surname
+        public override string Surname
         {
             get { return _surname; }
             set
@@ -264,6 +246,19 @@ namespace MainForm.Classes.UserClasses
                 {
                     throw new ArgumentException("Surname field must contain only Latin charecters!");
                 }
+            }
+        }
+
+        public override Role UserRole
+        {
+            get { return _userRole; }
+            set
+            {
+                if (!Enum.IsDefined(typeof(Role), value))
+                {
+                    throw new ArgumentException("Invalid user role!");
+                }
+                _userRole = value;
             }
         }
     }

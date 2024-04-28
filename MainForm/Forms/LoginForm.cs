@@ -44,19 +44,18 @@ namespace MainForm
                 if (isTrue) 
                 {
 
-                    if (currentUser.Role == Role.RegistredUser)
+                    if (currentUser.UserRole == Role.RegistredUser)
                     {
-                        // Обработка зарегистрированного пользователя
-                       CloseForm(this);
-                        RegistredUser registeredUser = (RegistredUser)currentUser;
+                        CloseForm(this);
+                        //RegistredUser registeredUser = (RegistredUser)currentUser;
                         RegistredUserForm registred = new RegistredUserForm(sessions);
                         registred.Show();
                     }
-                    else if(currentUser.Role == Role.Admin)
+                    else if(currentUser.UserRole == Role.Admin)
                     {
                         // Обработка администратора
                         CloseForm(this);
-                        Admin admin = (Admin)currentUser;
+                        //Admin admin = (Admin)currentUser;
                         adminForm.Show();
                     }
                     //MessageBox.Show("Successfully logged!");

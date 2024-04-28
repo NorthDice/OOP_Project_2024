@@ -16,8 +16,9 @@ namespace MainForm.Classes.UserClasses
         private string _name;
         private string _surname;
         private Role _userRole;
+
         public Admin() { }
-        public Admin(string login, string password, string name, string surname, Role userRole)
+        public Admin(string login, string password, string name, string surname, Role userRole = Role.None)
         {
             _login = login;
             Password = password;
@@ -162,7 +163,7 @@ namespace MainForm.Classes.UserClasses
             }
         }
 
-        public string Name
+        public override string Name
         {
             get { return _name; }
             set
@@ -178,7 +179,7 @@ namespace MainForm.Classes.UserClasses
             }
         }
 
-        public string Surname
+        public override string Surname
         {
             get { return _surname; }
             set
@@ -194,8 +195,7 @@ namespace MainForm.Classes.UserClasses
             }
         }
 
-        public Role UserRole
-        {
+        public override Role UserRole {
             get { return _userRole; }
             set
             {
@@ -206,7 +206,5 @@ namespace MainForm.Classes.UserClasses
                 _userRole = value;
             }
         }
-
-       
     }
 }

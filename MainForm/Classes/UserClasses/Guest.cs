@@ -1,4 +1,5 @@
 ﻿using MainForm.Classes.Cinema;
+using MainForm.Enums;
 using MainForm.Interfaces;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
@@ -18,6 +19,7 @@ namespace MainForm.Classes.UserClasses
         private string _password;
         private string _name;
         private string _surname;
+        private Role _userRole;
 
         public bool ViewSessions(DateTime date, SessionList sessions, ListBox listBox)
         {
@@ -138,7 +140,21 @@ namespace MainForm.Classes.UserClasses
                 }
             }
         }
-        public string Name
+
+        public override Role UserRole
+        {
+            get { return _userRole; }
+            set
+            {
+                if (!Enum.IsDefined(typeof(Role), value))
+                {
+                    throw new ArgumentException("Invalid user role!");
+                }
+                _userRole = value;
+            }
+        }
+
+        public override string Name
         {
             get { return _name; }
             set
@@ -153,8 +169,7 @@ namespace MainForm.Classes.UserClasses
                 }
             }
         }
-
-        public string Surname
+        public override string Surname
         {
             get { return _surname; }
             set

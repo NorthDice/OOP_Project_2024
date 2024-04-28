@@ -8,9 +8,9 @@ namespace MainForm.Enums
 {
     public enum Role
     {
-        Admin,
-        RegistredUser,
-        None
+        Admin = 0,
+        RegistredUser = 1,
+        None = 2 
     }
 
 }
