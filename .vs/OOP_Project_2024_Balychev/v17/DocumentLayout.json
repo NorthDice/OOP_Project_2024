@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\tests\\admintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\tests\\userlisttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|solutionrelative:tests\\userlisttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\tests\\admintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|solutionrelative:tests\\admintests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\json\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:json\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\classes\\cinema\\sessionlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\cinema\\sessionlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\tests\\guesttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,19 +43,11 @@
       "RelativeMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|solutionrelative:tests\\sessiontests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\tests\\userlisttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9681E88B-7D35-423C-9F59-C4A1A4315E62}|Tests\\Tests.csproj|solutionrelative:tests\\userlisttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\classes\\userclasses\\jsonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\jsonmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\json\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:json\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|c:\\visual studio projects\\oop_project_2024_balychev\\mainform\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -55,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\notrailingcommaformattingcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\classes\\userclasses\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\userclasses\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -69,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\forms\\registreduserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\forms\\registreduserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\classes\\cinema\\sessionlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|solutionrelative:mainform\\classes\\cinema\\sessionlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD05FF4E-D606-4E42-98CC-CDFE09337653}|MainForm\\MainForm.csproj|C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\mainform\\classes\\userclasses\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -137,11 +137,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Program.cs",
               "RelativeDocumentMoniker": "MainForm\\Program.cs",
@@ -154,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "RegistredUserForm.cs [Design]",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Forms\\RegistredUserForm.cs",
               "RelativeDocumentMoniker": "MainForm\\Forms\\RegistredUserForm.cs",
@@ -165,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "NoTrailingCommaFormattingContract.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\NoTrailingCommaFormattingContract.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\NoTrailingCommaFormattingContract.cs",
@@ -177,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "users.json",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\json\\users.json",
               "RelativeDocumentMoniker": "json\\users.json",
@@ -226,20 +226,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "UserListTests.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\Tests\\UserListTests.cs",
               "RelativeDocumentMoniker": "Tests\\UserListTests.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\Tests\\UserListTests.cs",
               "RelativeToolTip": "Tests\\UserListTests.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAewFkAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T15:05:59.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "SessionTests.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\Tests\\SessionTests.cs",
               "RelativeDocumentMoniker": "Tests\\SessionTests.cs",
@@ -247,12 +247,11 @@
               "RelativeToolTip": "Tests\\SessionTests.cs",
               "ViewState": "AQIAAGkAAAAAAAAAAAAAAHwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T15:05:57.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T15:05:57.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "SessionListTests.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\Tests\\SessionListTests.cs",
               "RelativeDocumentMoniker": "Tests\\SessionListTests.cs",
@@ -260,12 +259,11 @@
               "RelativeToolTip": "Tests\\SessionListTests.cs",
               "ViewState": "AQIAAGUAAAAAAAAAAAAAAHwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T15:05:53.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T15:05:53.396Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "RegistredUserTests.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\Tests\\RegistredUserTests.cs",
               "RelativeDocumentMoniker": "Tests\\RegistredUserTests.cs",
@@ -273,12 +271,11 @@
               "RelativeToolTip": "Tests\\RegistredUserTests.cs",
               "ViewState": "AQIAADIAAAAAAAAAAIAwwD4AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T15:05:51.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T15:05:51.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "GuestTest.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\Tests\\GuestTest.cs",
               "RelativeDocumentMoniker": "Tests\\GuestTest.cs",
@@ -286,18 +283,17 @@
               "RelativeToolTip": "Tests\\GuestTest.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAIAwwBkAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T15:05:47.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T15:05:47.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AdminTests.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\Tests\\AdminTests.cs",
               "RelativeDocumentMoniker": "Tests\\AdminTests.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\Tests\\AdminTests.cs",
               "RelativeToolTip": "Tests\\AdminTests.cs",
-              "ViewState": "AQIAACABAAAAAAAAAAAAAGMAAAAbAAAA",
+              "ViewState": "AQIAAPkAAAAAAAAAAAAAAGMAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T15:05:37.216Z",
               "EditorCaption": ""
@@ -340,19 +336,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 4,
               "Title": "SessionList.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\SessionList.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\Cinema\\SessionList.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\Cinema\\SessionList.cs",
               "RelativeToolTip": "MainForm\\Classes\\Cinema\\SessionList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T13:30:19.67Z"
+              "WhenOpened": "2024-04-25T13:30:19.67Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "JsonManager.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\JsonManager.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\JsonManager.cs",
@@ -360,12 +357,11 @@
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\JsonManager.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAEMAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T13:28:39.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T13:28:39.876Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\Admin.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\Admin.cs",
@@ -377,19 +373,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "UserList.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\UserList.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\UserList.cs",
               "ToolTip": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\UserList.cs",
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\UserList.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAwwGUAAAAJAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAwwDoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T13:22:00.407Z"
+              "WhenOpened": "2024-04-25T13:22:00.407Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "RegistredUser.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Classes\\UserClasses\\RegistredUser.cs",
               "RelativeDocumentMoniker": "MainForm\\Classes\\UserClasses\\RegistredUser.cs",
@@ -397,8 +394,7 @@
               "RelativeToolTip": "MainForm\\Classes\\UserClasses\\RegistredUser.cs",
               "ViewState": "AQIAAHUAAAAAAAAAAIAwwH4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T12:33:51.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T12:33:51.884Z"
             },
             {
               "$type": "Document",
@@ -414,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "MainForm\\Forms\\LoginForm.cs",
@@ -422,8 +418,7 @@
               "RelativeToolTip": "MainForm\\Forms\\LoginForm.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T17:22:31.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T17:22:31.48Z"
             },
             {
               "$type": "Document",
@@ -439,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "AdminForm.cs [Design]",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Forms\\AdminForm.cs",
               "RelativeDocumentMoniker": "MainForm\\Forms\\AdminForm.cs",
@@ -485,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Visual Studio Projects\\OOP_Project_2024_Balychev\\MainForm\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "MainForm\\Forms\\LoginForm.cs",

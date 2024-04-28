@@ -57,15 +57,6 @@ namespace MainForm.Classes.UserClasses
             return users.Count == 0;
         }
 
-        //public IEnumerator<User> GetEnumerator()
-        //{
-        //    return users.GetEnumerator();
-        //}
-
-        //IEnumerator IEnumerable.GetEnumerator()
-        //{
-        //    return users.GetEnumerator();
-        //}
         public void AddRange(IEnumerable<User> collection)
         {
             foreach (var user in collection)
@@ -98,6 +89,13 @@ namespace MainForm.Classes.UserClasses
 
         public void Add(User user)
         {
+            user = user ?? throw new ArgumentNullException(nameof(user), "User cannot be null");
+
+            if (users.Contains(user))
+            {
+                throw new ArgumentException("Duplicate user!");
+            }
+
             users.Add(user);
         }
 
@@ -118,6 +116,7 @@ namespace MainForm.Classes.UserClasses
 
         public bool Remove(User user)
         {
+
             user = user ?? throw new ArgumentNullException(nameof(user), "User cannot be null");
 
             return users.Remove(user);

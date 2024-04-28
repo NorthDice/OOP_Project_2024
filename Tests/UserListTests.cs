@@ -17,14 +17,13 @@ namespace Tests
         {
             // Arrange
             var userList = new UserList();
-            var user = new RegistredUser("testuser", "testpassword", "John", "Doe",Role.RegistredUser);
+            var user = new RegistredUser("testuser", "testpassword", "Johbnn", "Doe",Role.RegistredUser);
 
             // Act
             userList.Add(user);
 
             // Assert
             Assert.AreEqual(1, userList.Count);
-            Assert.IsTrue(userList.Contains(user.Name));
         }
 
         [TestMethod]

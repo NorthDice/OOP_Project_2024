@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using static System.Collections.Specialized.BitVector32;
 
 namespace MainForm.Classes.Cinema
 {
@@ -97,12 +98,11 @@ namespace MainForm.Classes.Cinema
                 array.SetValue(session, index++);
             }
         }
-
-        public void Add(Session item)
+        public void Add(Session session)
         {
-            _sessions.Add(item);
+            session = session ?? throw new ArgumentNullException(nameof(session), "Session can not be null value!");
+            _sessions.Add(session);
         }
-
         public bool Contains(Session item)
         {
             return _sessions.Contains(item);
@@ -113,9 +113,16 @@ namespace MainForm.Classes.Cinema
             _sessions.CopyTo(array, arrayIndex);
         }
 
-        public bool Remove(Session item)
+        public bool Remove(Session session)
         {
-             return _sessions.Remove(item);
+            session = session ?? throw new ArgumentNullException(nameof(session), "Session can not be null value!");
+
+            if (!_sessions.Contains(session))
+            {
+                throw new ArgumentException("Session not found!");
+            }
+
+            return _sessions.Remove(session);
         }
     }
 }
