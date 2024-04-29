@@ -20,7 +20,7 @@ namespace MainForm.Classes.UserClasses
         private Role _userRole;
         
         public RegistredUser() {     }
-        public RegistredUser(string login,string password,string name,string surname,Role userRole = Role.RegistredUser) 
+        public RegistredUser(string login,string password,string name,string surname,Role userRole) 
         { 
             _login= login;
             Password = password;

@@ -70,10 +70,15 @@ namespace MainForm.Classes.UserClasses
             }
 
 
-            foreach (User user in users)
+            for (int i = 0; i < users.Count; i++)
             {
+
+                User user = users[i];
+
                 if (user.Login == login && user.Password == password)
                 {
+                    Debug.WriteLine(user);
+                    Debug.WriteLine(user.UserRole);
                     CurrentUserManager.SetCurrentUser(user);
                     return true;
                 }

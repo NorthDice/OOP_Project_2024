@@ -10,14 +10,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace MainForm
 {
     public partial class AdminForm : Form
     {
-        UserList users;
-        SessionList sessions;
-        Admin admin;
+        private UserList users;
+        private SessionList sessions;
+        private Admin admin;
 
         public AdminForm(SessionList sessions, UserList users)
         {
@@ -61,17 +63,18 @@ namespace MainForm
                 MessageBox.Show(ex.Message);
             }
         }
-        private void buttonDeleteSession_Click(Object sender, EventArgs e)
+        private void buttonDeleteSession_Click(object sender, EventArgs e)
         {
             try
             {
                 DateTime date = dateTimePickerDate.Value.Date;
                 TimeSpan time = TimeSpan.Parse(textBoxTime.Text);
+                DateTime combinedDateTime = date.Add(time);
                 string filmName = textBoxFilmName.Text;
                 Halls hallNumber = (Halls)Enum.Parse(typeof(Halls), textBoxHall.Text);
 
 
-                bool isDeleted = admin.DeleteSession(date, time, hallNumber, filmName, sessions);
+                bool isDeleted = admin.DeleteSession(combinedDateTime, time, hallNumber, filmName, sessions);
                 if (isDeleted)
                 {
                     sessions.OnSessionsUpdated(EventArgs.Empty);
@@ -100,6 +103,7 @@ namespace MainForm
             {
                 DateTime selectedDate = dateTimePickerDate.Value.Date;
                 TimeSpan selectedTime = TimeSpan.Parse(textBoxTime.Text);
+                DateTime combinedDateTime = selectedDate.Add(selectedTime);
                 TimeSpan newTime = TimeSpan.Parse(textBoxNewTime.Text);
 
 

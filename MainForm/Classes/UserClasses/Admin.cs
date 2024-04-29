@@ -22,7 +22,7 @@ namespace MainForm.Classes.UserClasses
         private Role _userRole;
 
         public Admin() { }
-        public Admin(string login, string password, string name, string surname, Role userRole = Role.None)
+        public Admin(string login, string password, string name, string surname, Role userRole)
         {
             _login = login;
             Password = password;

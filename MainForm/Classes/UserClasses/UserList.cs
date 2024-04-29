@@ -96,6 +96,28 @@ namespace MainForm.Classes.UserClasses
             users.CopyTo(array, arrayIndex);
         }
 
+        public User this[int index]
+        {
+            get
+            {
+                if (index < 0 || index >= users.Count)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range");
+                }
+
+                return users[index];
+            }
+            set
+            {
+                if (index < 0 || index >= users.Count)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range");
+                }
+
+                users[index] = value;
+            }
+        }
+
         public bool Remove(User user)
         {
 

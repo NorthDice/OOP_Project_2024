@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace MainForm.Classes.UserClasses
 {
     internal class CurrentUserManager 
     {
-        private static User _currentUser;
+        private static User? _currentUser;
 
         public static void SetCurrentUser(User user)
         {
@@ -20,6 +21,7 @@ namespace MainForm.Classes.UserClasses
 
         public static User GetCurrentUser()
         {
+            Debug.WriteLine(_currentUser.UserRole);
             return _currentUser;
         }
     }

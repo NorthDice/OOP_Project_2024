@@ -26,5 +26,47 @@
     "Name": "Kiril",
     "Surname": "Balychev",
     "UserRole": 1
+  },
+  {
+    "Login": "adminn",
+    "Password": "adminn",
+    "Name": "Johnss",
+    "Surname": "Dossse",
+    "UserRole": 0
+  },
+  {
+    "Login": "adminn",
+    "Password": "adminn",
+    "Name": "Johnss",
+    "Surname": "Dossse",
+    "UserRole": 0
+  },
+  {
+    "Login": "aaaaa",
+    "Password": "aaaaaa",
+    "Name": "asdasdads",
+    "Surname": "dsadsadasdas",
+    "UserRole": 1
+  },
+  {
+    "Login": "adminn",
+    "Password": "adminn",
+    "Name": "Johnss",
+    "Surname": "Dossse",
+    "UserRole": 0
+  },
+  {
+    "Login": "adminn",
+    "Password": "adminn",
+    "Name": "Johnss",
+    "Surname": "Dossse",
+    "UserRole": 0
+  },
+  {
+    "Login": "Vasya",
+    "Password": "Vasyaa",
+    "Name": "Vasiliy",
+    "Surname": "Golovkin",
+    "UserRole": 1
   }
 ]

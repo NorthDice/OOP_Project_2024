@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace MainForm
         UserList users;
         SessionList sessions;
 
-        public LoginForm(Guest guest, UserList users,SessionList sessions)
+        public LoginForm(Guest guest, UserList users, SessionList sessions)
         {
             this.users = users;
             this.guest = guest;
@@ -33,15 +34,16 @@ namespace MainForm
         {
             try
             {
-               
+
                 string guestLogin = textBoxLogin.Text;
                 string guestPassword = textBoxPassword.Text;
 
-               
+
                 bool isTrue = guest.SignUp(guestLogin, guestPassword, users);
                 Classes.UserClasses.User currentUser = CurrentUserManager.GetCurrentUser();
+                Debug.WriteLine(currentUser);
 
-                if (isTrue) 
+                if (isTrue)
                 {
 
                     if (currentUser.UserRole == Role.RegistredUser)
@@ -53,10 +55,10 @@ namespace MainForm
                     }
                     else //if(currentUser.UserRole == Role.Admin)
                     {
-                        
+
                         CloseForm(this);
                         AdminForm adminForm = new AdminForm(sessions, users);
-                        Admin admin = (Admin)currentUser;
+                        Admin admin = (Admin)CurrentUserManager.GetCurrentUser();// = (Admin)currentUser;
                         adminForm.Show();
                     }
                 }
@@ -65,11 +67,11 @@ namespace MainForm
                     MessageBox.Show("Logining failed! \n Please check your login & password and try again!");
                 }
             }
-            catch (ArgumentException ex) 
+            catch (ArgumentException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

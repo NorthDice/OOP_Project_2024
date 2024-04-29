@@ -1,32 +1,14 @@
 [
   {
-    "Date": "2024-04-28T00:00:00",
+    "Date": "2024-04-29T13:00:00+03:00",
     "Time": "13:00:00",
     "HallNumber": 2,
-    "FilmName": "Film"
+    "FilmName": "Film2"
   },
   {
-    "Date": "2024-04-28T00:00:00",
-    "Time": "17:00:00",
-    "HallNumber": 2,
-    "FilmName": "Piko"
-  },
-  {
-    "Date": "2024-04-28T00:00:00",
-    "Time": "11:00:00",
-    "HallNumber": 3,
-    "FilmName": "Boku"
-  },
-  {
-    "Date": "2024-04-28T00:00:00",
-    "Time": "12:00:00",
-    "HallNumber": 6,
-    "FilmName": "No"
-  },
-  {
-    "Date": "2024-04-29T13:00:00",
+    "Date": "2024-04-30T13:00:00",
     "Time": "13:00:00",
     "HallNumber": 1,
-    "FilmName": "Pik"
+    "FilmName": "Film3"
   }
 ]
